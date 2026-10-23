@@ -29,3 +29,7 @@ Ověřit aktuálnost stanov a členů výboru, potvrdit partnery pro rok 2027, d
 - Občasník ČES: https://casopis.endodont.cz/ – hlavní menu, úvod a vzdělávání.
 - Hodnocení obtížnosti případů: https://form.endodont.cz/ – úvod a vzdělávání.
 - refer.endodont.cz při kontrole 23. 10. 2026 vracel HTTP 500; zatím není v navigaci.
+
+## Občasník 2026
+
+Vydání 2026 je v `dokumenty/obcasnik-ces-2026.pdf`, optimalizované pro web (180 dpi, nezměněný text a všech 12 PDF stran). Stránka `obcasnik.html` nabízí čtení, stažení a odkazy na archiv 2023–2025. Dodaný A4 mockup a náhled první strany jsou v `assets/casopis/`. Navigace a karty vedou na novou stránku časopisu.
