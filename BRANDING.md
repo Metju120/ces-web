@@ -16,3 +16,9 @@ Martin Dančík definitivně vybral variantu **1B.2** dne 23. října 2026. Jde 
 - `assets/branding/ces-20-let-1b2.webp`: optimalizovaná webová verze s průhledností, stejný poměr stran.
 
 Zachovat poměr stran, celou siluetu a modrostříbrné barevné provedení. Na webu je motiv vpravo v úvodní sekci; na mobilu pod úvodním textem. Popisek doplňovat jako živý text. Pro tisk ve větším formátu ověřit dostatečné rozlišení; tento podklad je rastrový.
+
+## Grant ČES
+
+Dodaný původní logotyp: `assets/branding/logo-grant-ces-master.png`; webová verze: `assets/branding/logo-grant-ces.webp`. Zachovat proporce a barevnost.
+
+Veřejný web obsahuje pouze obecné představení grantu. Podmínky dalších ročníků publikovat až po schválení. Interní e-maily, hodnocení žádostí, osobní podklady a neveřejné částky nepatří do veřejného repozitáře ani do zdrojů webu.

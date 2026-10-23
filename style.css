@@ -6,3 +6,6 @@
 
 /* Approved anniversary artwork 1B.2; see BRANDING.md. */
 .anniversary-art.final-emblem{flex-direction:column;gap:4px}.anniversary-art.final-emblem:before,.anniversary-art.final-emblem:after{display:none}.final-emblem img{display:block;width:100%;height:calc(100% - 30px);object-fit:contain}.final-emblem .art-caption{position:static;align-self:center;text-align:center;right:auto;bottom:auto}
+
+/* Shared professional resources: journal, grant and tools. */
+.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grant-tile img{display:block;width:min(100%,390px);height:auto;margin:4px 0 24px}.grant-logo{display:block;width:min(100%,700px);height:auto;margin:0 0 32px}@media(max-width:850px){.resource-grid{grid-template-columns:1fr}}
