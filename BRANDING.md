@@ -15,7 +15,7 @@ Martin Dančík definitivně vybral variantu **1B.2** dne 23. října 2026. Jde 
 - `assets/branding/ces-20-let-1b2-master.png`: originál s průhledností, 1536 × 1024 px. Použít jako zdroj při přípravě dalších materiálů.
 - `assets/branding/ces-20-let-1b2.webp`: optimalizovaná webová verze s průhledností, stejný poměr stran.
 
-Zachovat poměr stran, celou siluetu a modrostříbrné barevné provedení. Na webu je motiv vpravo v úvodní sekci; na mobilu pod úvodním textem. Popisek doplňovat jako živý text. Pro tisk ve větším formátu ověřit dostatečné rozlišení; tento podklad je rastrový.
+Zachovat poměr stran, celou siluetu a modrostříbrné barevné provedení. Na webu je motiv vpravo v úvodní sekci; na mobilu pod úvodním textem. Na úvodní stránce nepřidávat další výroční popisek pod motiv. Pro tisk ve větším formátu ověřit dostatečné rozlišení; tento podklad je rastrový.
 
 ## Grant ČES
 
@@ -30,3 +30,5 @@ Martinovo upřesnění: **dvacítka 1B.2 je vlevo před původním logem ČES a 
 Tato podoba je dočasným logem pro výroční rok; trvalé logo neměníme. Velký motiv 1B.2 zůstává v úvodu hlavní stránky, v patičkách žádná výroční dvacítka není. Po výročním roce odstranit dvacítku z hlavičky; původní logo zůstává zachované.
 
 Po úpravě stylů změnit verzi odkazu na stylesheet, aby návštěvník nezůstal u staré podoby z mezipaměti.
+
+Schválené zjednodušení: žádný horní výroční pás, žádný drobný výroční popisek pod úvodem ani opakovaný slogan na kongresové kartě. Sociální ikony jsou přímo v bílé hlavičce, vpravo nad navigací. Výroční grafika zůstává jen v dočasném logu a v hlavním úvodu.
