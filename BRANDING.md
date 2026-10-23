@@ -22,3 +22,7 @@ Zachovat poměr stran, celou siluetu a modrostříbrné barevné provedení. Na 
 Dodaný původní logotyp: `assets/branding/logo-grant-ces-master.png`; webová verze: `assets/branding/logo-grant-ces.webp`. Zachovat proporce a barevnost.
 
 Veřejný web obsahuje pouze obecné představení grantu. Podmínky dalších ročníků publikovat až po schválení. Interní e-maily, hodnocení žádostí, osobní podklady a neveřejné částky nepatří do veřejného repozitáře ani do zdrojů webu.
+
+## Výroční podoba webu (2007–2027)
+
+Pro výroční rok je v modré hlavičce společný blok původního loga ČES a motivu 1B.2. Jde o sestavení dvou původních podkladů v HTML/CSS, nikoli o změnu trvalého loga. Stejný motiv se opakuje v úvodu a výroční patičce. Po výročním roce odstranit výroční doplněk hlavičky a patičky; původní logo zůstává zachované.
