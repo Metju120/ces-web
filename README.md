@@ -23,3 +23,9 @@ Zdroj stránek je v `build.py`; změny událostí v seznamu `E`. Generování: `
 ## Před ostrým spuštěním
 
 Ověřit aktuálnost stanov a členů výboru, potvrdit partnery pro rok 2027, doplnit aktuální registrace a časový program. Doplnit úplné informace k nakládání s členskými údaji podle skutečného procesu. Rozhodnout o přímém odesílání přihlášek na hostingu. Výroční grafika zůstává oddělená od loga a lze ji po roce 2027 snadno změnit.
+
+## Propojené služby
+
+- Občasník ČES: https://casopis.endodont.cz/ – hlavní menu, úvod a vzdělávání.
+- Hodnocení obtížnosti případů: https://form.endodont.cz/ – úvod a vzdělávání.
+- refer.endodont.cz při kontrole 23. 10. 2026 vracel HTTP 500; zatím není v navigaci.
