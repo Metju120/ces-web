@@ -28,3 +28,14 @@ Ověřeno: serverová validace, adresáti obou e-mailů, chybové stavy, duplici
 - Občasník 2026: dodaný finální podklad a mockup.
 
 Sponzoři jsou zobrazováni výhradně na `kongres.html`. Výroční hlavička spojuje původní logo ČES s malým doplňkem 1B.2; patička je bez výročního motivu; viz `BRANDING.md`.
+
+## ESE a IFEA
+
+Společná podsekce pod O ČES: `ese-ifea.html`. ESE vychází z místní zálohy původní veřejné stránky a zachovává přehled bienálních kongresů. Podmínky individuálního členství odkazují na aktuální oficiální web. IFEA je představena podle oficiálního webu, bez neveřejné komunikace nebo slibů členských výhod.
+
+Ověřené veřejné zdroje (23. 10. 2026):
+- https://www.endodont.cz/ese
+- https://www.e-s-e.eu/our-mission/
+- https://www.e-s-e.eu/join-us/society-members-directory/czech-endodontic-society-6/
+- https://www.ifeaendo.org/
+- https://www.ifeaendo.org/member-associations (seznam dostupný ve výsledcích vyhledávání; přímé načtení nástrojem jednou vypršelo).
