@@ -39,3 +39,7 @@ Ověřené veřejné zdroje (23. 10. 2026):
 - https://www.e-s-e.eu/join-us/society-members-directory/czech-endodontic-society-6/
 - https://www.ifeaendo.org/
 - https://www.ifeaendo.org/member-associations (seznam dostupný ve výsledcích vyhledávání; přímé načtení nástrojem jednou vypršelo).
+
+### Světový endodontický den
+
+Veřejná sekce IFEA obsahuje připomínku 16. října a české heslo „Zachovejte svůj zub. Neztraťte svůj úsměv.“ — přesné finální znění podle Martinovy komunikace z 12. 10. 2026. Osvětový účel potvrzuje zpráva IFEA z 3. 10. 2024; program sympozia 2026 potvrzuje členská pozvánka z 12. 10. 2026 a veřejná stránka https://www.ifeaendo.org/symposium/. Interní organizační komunikace, soukromé kontakty a přístupové odkazy pro zástupce se nezveřejňují. Letošní sympozium je popsáno v minulém čase, bez neplatné výzvy k registraci.
