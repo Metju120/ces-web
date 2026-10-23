@@ -13,7 +13,6 @@ Zdroj stránek je v `build.py`; změny událostí v seznamu `E`. Generování: `
 - Úvodní stránka, 19. kongres, vzdělávání a filtrovatelný kalendář.
 - 23. 1. 2027: volební členská schůze, Grandior Praha.
 - 19. 3. 2027: prof. Josette Camilleri, Praha.
-- 7. 5. 2027: Na hraně.
 - 18.–20. 6. 2027: společné výjezdní zasedání ČES a SES, Hotel Horal, Rožnov pod Radhoštěm.
 - 17.–18. 9. 2027: 19. výroční kongres ČES.
 - Výbor, komise, stanovy a historie ze zálohy původního veřejného webu.
