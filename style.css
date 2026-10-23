@@ -15,7 +15,7 @@
 @media(max-width:850px){.header{flex-wrap:nowrap}.brand.brand-lockup{flex:0 1 360px}.nav{color:var(--ink)}.nav a:hover,.nav a[aria-current=page]{color:var(--blue)}.nav .nav-join{background:var(--blue);color:#fff}.nav .nav-join:hover{background:#2469aa;color:#fff}.issues-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.header{padding:16px 0}.brand.brand-lockup{flex:1 1 auto;min-width:0;gap:5px;padding:10px}.brand-lockup>.ces-logo{width:73%}.brand-lockup>.brand-jubilee{width:25%}.menu-button{flex-shrink:0}.speaker-photo{float:none;display:block;width:200px;margin:0 0 24px}.event-table{font-size:14px}.event-table th,.event-table td{padding:10px 9px}.issue-copy{padding:22px}.issue-copy h2{font-size:24px}}
 
-/* Compact, temporary anniversary logo: a small 1B.2 signature on the CES lockup. */
-.brand.brand-lockup{position:relative;display:block;flex:0 1 345px;padding:13px 16px}.brand-lockup>.ces-logo{display:block;width:100%;height:auto}.brand-lockup>.brand-jubilee{position:absolute;left:auto;right:12px;bottom:9px;display:block;width:42px;height:28px;max-width:42px;object-fit:contain}
-@media(max-width:850px){.brand.brand-lockup{flex:0 1 320px}}
-@media(max-width:600px){.brand.brand-lockup{flex:1 1 auto;max-width:280px;padding:10px}.brand-lockup>.ces-logo{width:100%}.brand-lockup>.brand-jubilee{left:auto;width:30px;height:20px;max-width:30px;right:8px;bottom:7px}}
+/* One-year anniversary lockup: 1B.2 on the left, almost the height of the CES logo. */
+.brand.brand-lockup{position:relative;display:grid;grid-template-columns:1fr 2fr;align-items:center;flex:0 1 410px;gap:12px;padding:0;background:transparent;border-radius:0}.brand-lockup>.ces-logo{display:block;width:100%;height:auto}.brand-lockup>.brand-jubilee{position:static;display:block;width:100%;height:auto;max-width:none;object-fit:contain}
+@media(max-width:850px){.brand.brand-lockup{flex:0 1 370px}}
+@media(max-width:600px){.brand.brand-lockup{flex:1 1 auto;max-width:290px;min-width:0;gap:8px;padding:0}.brand-lockup>.ces-logo,.brand-lockup>.brand-jubilee{width:100%;height:auto;max-width:none}}

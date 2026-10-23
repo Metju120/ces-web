@@ -25,8 +25,8 @@ Veřejný web obsahuje pouze obecné představení grantu. Podmínky dalších r
 
 ## Výroční podoba webu (2007–2027)
 
-Po upřesnění Martinem: v bílé hlavičce je původní logo ČES s výrazně menším motivem 1B.2 přisazeným k pravému dolnímu okraji jako nenápadný výroční podpis (42 px na desktopu, 30 px na mobilu). Jde o jeden společný klikací blok, sestavený v HTML/CSS ze zachovaných podkladů. Tato podoba je dočasným logem pro výroční rok; trvalé logo neměníme.
+Martinovo upřesnění: **dvacítka 1B.2 je vlevo před původním logem ČES a je téměř stejně vysoká jako logo**. V bílé hlavičce tvoří oba podklady jeden společný klikací blok v poměru šířek 1 : 2, s malou mezerou. Nejde o drobný podpis v rohu. Zmenšují se společně i na mobilu.
 
-Velký motiv 1B.2 zůstává pouze v úvodní sekci hlavní stránky. V patičkách žádná výroční dvacítka není. Po výročním roce odstranit malý výroční podpis z hlavičky; původní logo zůstává zachované.
+Tato podoba je dočasným logem pro výroční rok; trvalé logo neměníme. Velký motiv 1B.2 zůstává v úvodu hlavní stránky, v patičkách žádná výroční dvacítka není. Po výročním roce odstranit dvacítku z hlavičky; původní logo zůstává zachované.
 
-Hlavička je bílá. Rozměry výročního doplňku jsou omezené v HTML i CSS; je vždy napravo od loga. Po úpravě stylů změnit verzi odkazu na stylesheet, aby návštěvník nezůstal u staré podoby z mezipaměti.
+Po úpravě stylů změnit verzi odkazu na stylesheet, aby návštěvník nezůstal u staré podoby z mezipaměti.
