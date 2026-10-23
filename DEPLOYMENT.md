@@ -27,4 +27,4 @@ Ověřeno: serverová validace, adresáti obou e-mailů, chybové stavy, duplici
 - Občasník 2023–2025: veřejný archiv https://casopis.endodont.cz/, PDF a původní náhledy. PDF optimalizována pro web, zachován počet stran a text.
 - Občasník 2026: dodaný finální podklad a mockup.
 
-Sponzoři jsou zobrazováni výhradně na `kongres.html`. Výroční hlavička a patička používají původní logo ČES vedle schváleného motivu 1B.2; viz `BRANDING.md`.
+Sponzoři jsou zobrazováni výhradně na `kongres.html`. Výroční hlavička spojuje původní logo ČES s malým doplňkem 1B.2; patička je bez výročního motivu; viz `BRANDING.md`.
