@@ -29,9 +29,14 @@ if(form){
    const response=await fetch(endpoint,{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(fields),signal:AbortSignal.timeout(30000)});
    let data;try{data=await response.json()}catch{throw new Error('Odeslání se nepodařilo ověřit. Zkontrolujte potvrzení v e-mailu nebo kontaktujte sekretariát.')}
    if(!response.ok||data.ok!==true)throw new Error(data.error||'Odeslání se nezdařilo. Zkuste to později nebo napište sekretariátu.');
+   cesMetric('membership_submission_accepted',{confirmation:data.confirmation===true});
    showResult(`Přihláška byla předána k odeslání sekretariátu. Evidenční číslo: ${data.reference}. `+(data.confirmation?'Potvrzení bylo předáno k odeslání na váš e-mail. Pokud jej nenajdete, zkontrolujte také spam.':'Potvrzení na váš e-mail se nepodařilo odeslat. Přihlášku znovu neposílejte; pro ověření kontaktujte sekretariát.'));
    form.querySelectorAll('input,textarea,button').forEach(el=>el.disabled=true);submit.textContent='Přihláška odeslána';availability.textContent='Sekretariát vás bude kontaktovat s dalším postupem.';ready=false;
   }catch(error){showResult(error.name==='TimeoutError'?'Spojení vypršelo. Odeslání se mohlo dokončit; ověřte potvrzení v e-mailu, než přihlášku odešlete znovu.':error.name==='Error'?error.message:'Odeslání se nepodařilo ověřit. Zkontrolujte potvrzení v e-mailu nebo kontaktujte sekretariát.');submit.disabled=false;submit.textContent='Odeslat přihlášku'}
   finally{sending=false}
  });
 }
+
+// Anonymous conversion hooks. A collector is intentionally not configured yet.
+function cesMetric(event,parameters={}){window.dispatchEvent(new CustomEvent('ces:metric',{detail:{event,...parameters}}))}
+document.addEventListener('click',event=>{const a=event.target.closest('a');if(!a)return;const url=new URL(a.href,location.href);if(url.hostname==='form.simpleshop.cz')cesMetric('registration_click',{event_id:'camilleri-2027'});else if(url.origin===location.origin&&url.pathname.endsWith('/prihlaska.html'))cesMetric('membership_form_open')});

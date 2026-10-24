@@ -1,35 +1,22 @@
 # Web České endodontické společnosti
 
-První veřejná verze webu pro výroční rok 2027. Vzhled A2: bílá, modrá a stříbrná, původní logo ČES.
+Výroční web ČES, bílé/modré/stříbrné provedení a schválený motiv 1B.2. GitHub Pages: https://metju120.github.io/ces-web/
 
-## Provoz
+## Sestavení
 
-Statické HTML, CSS a JavaScript. Žádné závislosti, databáze ani PHP. Kořen repozitáře lze nahrát na Český hosting nebo zveřejnit na GitHub Pages (větev `main`, kořen `/`). Není nastavena vlastní doména: náhled nemění živý web ani DNS.
+- `python build.py` vytvoří neindexovaný statický náhled v kořeni repozitáře.
+- `python build.py --production` připraví kompletní `release/` k nahrání na Český hosting: stránky, styly, obrázky, PDF, PHP formulář, sitemapu a 301 přesměrování.
+- Na ostrý hosting použít **obsah release/**. Root HTML z repozitáře mají noindex a jsou určena pro GitHub náhled.
+- Python používá standardní knihovnu. Veškeré zdroje jsou nyní v repozitáři; původní scratch záloha není pro sestavení potřebná.
 
-Zdroj stránek je v `build.py`; změny událostí v seznamu `E`. Generování: `python3 build.py`. Pro opětovné generování archivních stránek jsou potřebné původní texty a PDF ze zálohy; veřejné výsledné HTML/PDF je již součástí repozitáře. CSS v `style.css`, interakce v `app.js`.
+Obsah v `build.py` a `content/`, SEO v `seo.py`, vzhled v `style.css`, interakce v `app.js`. Přihláška používá PHP 8.2+ a mail() na Českém hostingu; na GitHub Pages není odesílání dostupné. Podrobnosti a otevřené kroky: DEPLOYMENT.md. Identita: BRANDING.md.
 
-## Obsah první verze
+## Obsah
 
-- Úvodní stránka, 19. kongres, vzdělávání a filtrovatelný kalendář.
-- 23. 1. 2027: volební členská schůze, Grandior Praha.
-- 19. 3. 2027: prof. Josette Camilleri, Praha.
-- 18.–20. 6. 2027: společné výjezdní zasedání ČES a SES, Hotel Horal, Rožnov pod Radhoštěm.
-- 17.–18. 9. 2027: 19. výroční kongres ČES.
-- Výbor, komise, stanovy a historie ze zálohy původního veřejného webu.
-- Archivní odborné dokumenty, kontakt, informace o členství.
-- Přihláška: validace polí a příprava e-mailu / stažení textu. **Neodesílá sama a neukládá data.** Přímé bezpečné odesílání bude vyžadovat napojení na server.
-- Každá akce má stažení celodenní události ICS; časy nejsou zatím stanoveny.
+Přednáška Camilleri, 19. kongres 2027, kalendář, členství, výbor, stanovy, historie, ESE/IFEA, Grant ČES, lokální archiv všech čtyř vydání Občasníku a archiv minulých kongresů/přednášek.
 
-## Před ostrým spuštěním
+Sponzorské podklady zůstávají uložené; zobrazení pouze na kongresové stránce až po potvrzení partnerství pro 2027. Aktuálně `SPONSORS_CONFIRMED=False`.
 
-Ověřit aktuálnost stanov a členů výboru, potvrdit partnery pro rok 2027, doplnit aktuální registrace a časový program. Doplnit úplné informace k nakládání s členskými údaji podle skutečného procesu. Rozhodnout o přímém odesílání přihlášek na hostingu. Výroční grafika zůstává oddělená od loga a lze ji po roce 2027 snadno změnit.
+## Před spuštěním
 
-## Propojené služby
-
-- Občasník ČES: https://casopis.endodont.cz/ – hlavní menu, úvod a vzdělávání.
-- Hodnocení obtížnosti případů: https://form.endodont.cz/ – úvod a vzdělávání.
-- refer.endodont.cz při kontrole 23. 10. 2026 vracel HTTP 500; zatím není v navigaci.
-
-## Občasník 2026
-
-Vydání 2026 je v `dokumenty/obcasnik-ces-2026.pdf`, optimalizované pro web (180 dpi, nezměněný text a všech 12 PDF stran). Stránka `obcasnik.html` nabízí čtení, stažení a odkazy na archiv 2023–2025. Dodaný A4 mockup a náhled první strany jsou v `assets/casopis/`. Navigace a karty vedou na novou stránku časopisu.
+Nasazení na Český hosting, ověření skutečného doručení přihlášek, kontrola HTTPS/301 a Search Console. Potvrdit příspěvek 2027, program/místo/registraci kongresu a podmínky společného zasedání. Pro skutečné měření registrací připojit analytický systém a data SimpleShopu; samotné události v JavaScriptu zatím nic nesbírají.

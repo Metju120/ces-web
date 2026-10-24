@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+# Preview uses page-level noindex; crawling must remain allowed.
