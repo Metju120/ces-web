@@ -2,6 +2,7 @@
 from pathlib import Path
 import json,html,sys,shutil
 from seo import metadata, finish_seo
+from history_render import render_history_article
 from datetime import date,timedelta
 ROOT=Path(__file__).parent
 PRODUCTION="--production" in sys.argv
@@ -37,7 +38,7 @@ def footer(page):
 
 def write(page,title,body,desc='Česká endodontická společnost. Kongres, odborné vzdělávání, kalendář akcí a členství. 20 let ČES v roce 2027.'):
  title,desc,seo=metadata(page,title,desc,PRODUCTION)
- text=f'''<!doctype html><html lang="{'en' if page=='english.html' else 'cs'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{esc(title)} | ČES</title><meta name="description" content="{esc(desc)}"><meta name="theme-color" content="#337fc4"><meta property="og:title" content="{esc(title)} | ČES"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="website"><link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="style.css?v=20261024-1b"><script src="app.js" defer></script>{seo}</head><body class="{'home' if page=='index.html' else 'inner-page'}">'''+header(page)+'<main id="main">'+body+'</main>'+footer(page)+'</body></html>'
+ text=f'''<!doctype html><html lang="{'en' if page=='english.html' else 'cs'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{esc(title)} | ČES</title><meta name="description" content="{esc(desc)}"><meta name="theme-color" content="#337fc4"><meta property="og:title" content="{esc(title)} | ČES"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="website"><link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="style.css?v=20261024-historie"><script src="app.js" defer></script>{seo}</head><body class="{'home' if page=='index.html' else 'inner-page'}">'''+header(page)+'<main id="main">'+body+'</main>'+footer(page)+'</body></html>'
  (OUT/page).write_text(text,encoding='utf8')
 def intro(title,lead=''):return '<section class="page-intro"><div class="wrap"><div class="breadcrumb"><a href="index.html">Úvod</a> / '+esc(title)+'</div><h1>'+esc(title)+'</h1>'+('<p class="lead">'+lead+'</p>' if lead else '')+'</div></section>'
 def filters():return '<div class="filters" role="group" aria-label="Filtrovat akce">'+''.join(f'<button type="button" data-filter="{k}" aria-pressed="{str(k=="all").lower()}">{n}</button>' for k,n in [('all','Všechny akce'),('lecture','Vzdělávání'),('congress','Kongresy'),('meeting','Schůze a zasedání')])+'</div>'
@@ -88,7 +89,7 @@ write('prihlaska.html','Přihláška do ČES',intro('Přihláška do ČES','Při
 write('kontakt.html','Kontakt',intro('Kontakt','Jsme tu pro vaše dotazy k členství i odborným akcím.')+'<section class="wrap page-body"><div class="board-grid"><article class="person"><p class="role">Společnost</p><h3>Česká endodontická společnost, z. s.</h3><p>Slavojova 22<br>128 00 Praha 2<br>IČO: 22666711</p><a href="mailto:info@endodont.cz">info@endodont.cz</a></article><article class="person"><p class="role">Sekretariát</p><h3>Členství a administrativa</h3><a href="mailto:sekretariat@endodont.cz">sekretariat@endodont.cz</a></article><article class="person"><p class="role">Bankovní spojení</p><h3>Fio banka</h3><p>2900794474/2010</p><p style="font-size:13px;overflow-wrap:anywhere">IBAN: CZ6620100000002900794474<br>BIC: FIOBCZPPXXX</p></article></div></section>')
 # Archived source texts: strip navigation and repeated footer, preserve wording.
 write('stanovy.html','Stanovy ČES',intro('Stanovy ČES','Znění převzaté z dosavadního webu společnosti.')+'<article class="wrap page-body prose">'+(ROOT/'content/stanovy.html').read_text()+'</article>')
-write('historie.html','Historie ČES',intro('Historie ČES','Dvacet let odborných setkání a spolupráce.')+'<article class="wrap page-body prose">'+(ROOT/'content/historie.html').read_text()+'</article>')
+write('historie.html','Historie ČES',intro('Historie ČES','Dvacet let odborných setkání a spolupráce.')+'<article class="wrap page-body prose">'+render_history_article((ROOT/'content/historie-clanek.md').read_text(encoding='utf-8'))+'</article>')
 files=[]
 for f in sorted((ROOT/'dokumenty').glob('data-*.pdf')):
  name=f.name
