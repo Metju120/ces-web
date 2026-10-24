@@ -19,6 +19,7 @@ PAGES={
 'grant.html':('Grant ČES – podpora vzdělávání a výzkumu','Grant České endodontické společnosti podporuje vzdělávání a výzkum v endodoncii. Informace k dalšímu ročníku zveřejníme po schválení.'),
 'ese-ifea.html':('ESE a IFEA – mezinárodní spolupráce ČES','ČES v evropské ESE a světové IFEA. Odborné zdroje, mezinárodní kongresy a Světový endodontický den 16. října.'),
 'kontakt.html':('Kontakt a sekretariát ČES','Kontaktní údaje České endodontické společnosti. Sekretariát pro dotazy k členství, odborným akcím a činnosti společnosti.'),
+'obtiznost.html':('Obtížnost endodontického případu – hodnoticí formulář ČES','Interaktivní klasifikace obtížnosti endodontického případu. 13 otázek, 84 možností, bodové hodnocení, tisk a možnost odeslání přehledu s přílohami.'),
 'materialy.html':('Endodoncie – odborné materiály a doporučení ČES','Archiv odborných dokumentů ČES ke stažení: příprava zubu, výplachový protokol a hodnocení endodontické léčby. U dokumentů zohledněte rok vydání.'),
 'ochrana-udaju.html':('Ochrana osobních údajů ČES','Informace o zpracování osobních údajů při podání přihlášky do České endodontické společnosti a kontakt na správce údajů.'),
 'obchodni-podminky.html':('Obchodní podmínky a reklamační řád ČES','Obchodní podmínky vzdělávacích akcí České endodontické společnosti, verze 1.1 účinná od 12. 6. 2026. Objednávky, platby, storno a reklamace.'),

@@ -88,3 +88,11 @@ Před skutečným měřením připojit zvolený analytický systém a sladit inf
 6. Ověřit staré odkazy, aktuální formuláře a testovací doručení e-mailů; DNS pošty (MX, SPF, DKIM, DMARC) ponechat. Hlavní doménu přepnout z Poski na Český hosting až po ověření produkčního webu; otestovat www, apex, HTTPS, sitemap, 301 i členství.
 
 **Status k 24. 10. 2026:** kanonická adresa na GitHubu upravena; **subdomény nebyly přesměrovány ani smazány**, žádné staré soubory ani databáze nebyly odstraněny a úplný export starých služeb dosud nebyl doložen.
+
+
+## Migrace form.endodont.cz (24. 10. 2026)
+
+- Dodaná ZIP záloha `Záloha form.endodont.zip` obsahovala `index.php`, původní českou sadu `resources/questions/cs/questions.json`, `js/questions.js`, `sendEmail.php` a staré mPDF 6/SwiftMailer. Zjištěno **13 otázek, 84 voleb ve 3 skupinách**. Volby se používají jako checkboxy a sčítají 1 / 2 / 5 bodů, nikoliv vzájemně výlučná radio tlačítka.
+- Nové řešení: `obtiznost.html`, `content/obtiznost.html`, `assets/assessment/questions.json`, `assessment.js`, `assessment.css`, `api/obtiznost.php`, `api/obtiznost-lib.php`, Composer dompdf. Odesílané skóre server znovu počítá proti uloženým kritériím. Původní rozsahy tříd zachovány.
+- Lze tisknout / uložit PDF na GitHub Pages; odeslání PDF přílohy se dvěma soubory zajišťuje PHP na Českém hostingu. GitHub Pages PHP neprovádí. Doručení e-mailů je nutné ověřit na ostrém hostingu a nastavit potřebné PHP limity pro nahrávání příloh.
+- Před odstraněním `form.endodont.cz` otestovat novou funkci od začátku do konce, včetně přijetí e-mailu, PDF, obrázku a ochrany proti opakovanému odeslání. Samostatná aplikace na subdoméně zatím nebyla smazána.

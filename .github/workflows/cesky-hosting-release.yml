@@ -13,6 +13,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Set up PHP and Composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: dom, mbstring, fileinfo
+          coverage: none
+      - name: Validate assessment PHP and scoring
+        run: |
+          php -l api/obtiznost.php
+          php -l api/obtiznost-lib.php
+          php -d zend.assertions=1 -d assert.exception=1 tests/obtiznost.test.php
+      - name: Install PDF library
+        run: composer install --no-dev --prefer-dist --no-interaction --no-progress --optimize-autoloader
       - name: Build production pages
         run: python3 build.py --production
       - name: Validate output
@@ -20,7 +33,7 @@ jobs:
           python3 - <<'PYCHK'
           from pathlib import Path
           root = Path('release')
-          files = ['index.html', 'kongres.html', 'kalendar.html', 'vzdelavani.html', 'english.html', 'prihlaska.html', 'obchodni-podminky.html', 'podminky-ochrany-osobnich-udaju.html', 'api/clenstvi.php', '.htaccess', 'sitemap.xml', 'robots.txt']
+          files = ['index.html', 'kongres.html', 'kalendar.html', 'vzdelavani.html', 'english.html', 'prihlaska.html', 'obchodni-podminky.html', 'podminky-ochrany-osobnich-udaju.html', 'api/clenstvi.php', 'api/obtiznost.php', 'obtiznost.html', 'assessment.js', 'assessment.css', 'vendor/autoload.php', '.htaccess', 'sitemap.xml', 'robots.txt']
           missing = [name for name in files if not (root / name).is_file()]
           if missing:
               raise SystemExit('Missing production files: ' + ', '.join(missing))
@@ -28,6 +41,9 @@ jobs:
           congress = (root / 'kongres.html').read_text(encoding='utf-8')
           english = (root / 'english.html').read_text(encoding='utf-8')
           assert '24.–25. září 2027' in index
+          assert 'href="obtiznost.html"' in index
+          assert 'assets/assessment/questions.json' in (root / 'assessment.js').read_text(encoding='utf-8')
+          assert 'Odeslání výsledků e-mailem' in (root / 'obtiznost.html').read_text(encoding='utf-8')
           assert '20270924' in congress and '20270926' in congress
           camilleri = (root / 'camilleri.html').read_text(encoding='utf-8')
           assert 'href="obchodni-podminky.html"' in camilleri

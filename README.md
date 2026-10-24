@@ -33,3 +33,11 @@ Nasazení na Český hosting, ověření skutečného doručení přihlášek, k
 - Stránka na GitHub Pages je neindexovaný pracovní náhled. Před ostrým publikováním ověřte redakční znění a oprávnění k fotografiím.
 
 Podrobné názvy obrázků a vazbu na zdrojové fotografie uvádí `content/historie-fotografie.md`.
+
+## Hodnocení obtížnosti endodontického případu
+
+- Migrace **13 českých otázek / 84 možností** ze zálohy původního `form.endodont.cz` (metodika Canadian Academy of Endodontics): `assets/assessment/questions.json`.
+- Stránka `obtiznost.html` používá `assessment.js` a `assessment.css`. Výsledek je počítán z označených možností (1/2/5 bodů), třídy podle původní stupnice: 15–17 = 1, 18–25 = 2, od 26 = 3; při nižším skóre bez klasifikace. Tisk do PDF funguje v prohlížeči i na GitHub Pages.
+- Na PHP hostingu `api/obtiznost.php` ověřuje skóre také na serveru a odesílá PDF přehled a nejvýše dvě anonymizované přílohy e-mailem. Omezení odesílání, CSRF, validace MIME, velikostí a adresátů.
+- Pro serverový PDF soubor je využito **dompdf** instalované přes Composer, které je v produkčním balíčku přibalené v `vendor/`. Staré neudržované knihovny mPDF 6 / SwiftMailer nejsou přebírány.
+- Před spuštěním ověřit doručení e-mailů a nastavit PHP `upload_max_filesize >= 6M`, `post_max_size >= 16M` a `memory_limit >= 128M`. Původní funkční web na subdoméně nepřesměrovávat, dokud neprojde test výpočtu, tisku, PDF i odeslání dvou příloh na Českém hostingu.
