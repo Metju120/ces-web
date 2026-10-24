@@ -20,3 +20,11 @@ Sponzorské podklady zůstávají uložené; zobrazení pouze na kongresové str
 ## Před spuštěním
 
 Nasazení na Český hosting, ověření skutečného doručení přihlášek, kontrola HTTPS/301 a Search Console. Potvrdit příspěvek 2027, program/místo/registraci kongresu a podmínky společného zasedání. Pro skutečné měření registrací připojit analytický systém a data SimpleShopu; samotné události v JavaScriptu zatím nic nesbírají.
+
+## Historie ČES — článek k 20. výročí
+
+- Jediný redakční zdroj pro web i pro Občasník ČES a LKS: `content/historie-clanek.md`.
+- `python build.py` generuje z článku stránku `historie.html`; při nasazení `python build.py --production` vzniká soubor v `release/`.
+- Zástupné fotografie mají tvar `[[FOTO: téma | pracovní popisek]]`. Před zveřejněním nahraďte ověřenými fotografiemi v `assets/historie/` a zápisem `[[OBRAZEK: assets/historie/fotografie.webp | Popis snímku | Popisek s případným uvedením autora]]`.
+- Připravené pozice: první workshopy (2008), detail Ceny Luďka Peřinky (2018), její slavnostní předání (2018), současný výroční kongres.
+- Historická fotografie a přednášející musí být ověřeni před ostrým publikováním; stránka na GitHub Pages zůstává neindexovaným náhledem.
