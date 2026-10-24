@@ -1,0 +1,17 @@
+{
+  "name": "ces/website-assessment",
+  "description": "PDF generation for Česká endodontická společnost difficulty assessment",
+  "type": "project",
+  "require": {
+    "php": ">=8.2",
+    "ext-dom": "*",
+    "ext-mbstring": "*",
+    "ext-fileinfo": "*",
+    "dompdf/dompdf": "^3.1"
+  },
+  "config": {
+    "allow-plugins": {},
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}
