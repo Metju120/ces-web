@@ -1,7 +1,7 @@
 """Page metadata and separate preview/production outputs; no network needed."""
 from pathlib import Path
 import html,json,re
-BASE='https://endodont.cz/'
+BASE='https://www.endodont.cz/'
 PAGES={
 'index.html':('Česká endodontická společnost – vzdělávání a kongres','Odborné vzdělávání v endodoncii, kongres ČES, přednášky a členství. Pro zubní lékaře, kteří chtějí rozvíjet své znalosti a sdílet zkušenosti.'),
 'camilleri.html':('Josette Camilleri: MTA a biokeramické sealery 2027','Přednáška prof. Josette Camilleri 19. 3. 2027 v Praze. Program, ceny a registrace. Simultánní tlumočení, 5 kreditů ČSK. Pro členy i nečleny.'),
@@ -43,7 +43,7 @@ def finish_seo(out,production):
  (out/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+html.escape(u)+'</loc></url>' for u in urls)+'</urlset>')
  (out/'robots.txt').write_text('User-agent: *\nDisallow:\n'+('Sitemap: '+BASE+'sitemap.xml\n' if production else '# Preview uses page-level noindex; crawling must remain allowed.\n'))
  if production:
-  rules=['RewriteEngine On','RewriteCond %{HTTP_HOST} ^www\\.endodont\\.cz$ [NC]','RewriteRule ^ https://endodont.cz%{REQUEST_URI} [R=301,L,NE]','RewriteCond %{HTTP_HOST} ^endodont\\.cz$ [NC]','RewriteCond %{HTTPS} !=on','RewriteRule ^ https://endodont.cz%{REQUEST_URI} [R=301,L,NE]','RewriteRule ^index\\.html$ https://endodont.cz/ [R=301,L]']
+   rules=['RewriteEngine On','RewriteCond %{HTTP_HOST} ^endodont\\.cz$ [NC,OR]','RewriteCond %{HTTPS} !=on','RewriteRule ^ https://www.endodont.cz%{REQUEST_URI} [R=301,L,NE]','RewriteRule ^index\\.html$ https://www.endodont.cz/ [R=301,L]']
   redirects={**REDIRECTS,**json.loads((Path(__file__).parent/'content/redirects-archiv.json').read_text())}
   rules += ['RewriteRule ^'+re.escape(old)+'/?$ /'+new+' [R=301,L]' for old,new in redirects.items()]
   for pdf in (Path(__file__).parent/'dokumenty').glob('data-blob-*.pdf'):
