@@ -57,7 +57,7 @@ Podle dochované členské databáze evidovala ČES v roce 2007 celkem 15 člen�
 
 ### Dvacet let ČES
 
-V roce 2027 si ČES připomene dvacet let od svého založení. Devatenáctý kongres České endodontické společnosti je plánován na 17. a 18. září 2027. Naváže na tradici, která začala prvním kongresem v roce 2009, i na původní poslání společnosti: propojovat kolegy, sdílet zkušenosti a přispívat ke kvalitě endodontické péče.
+V roce 2027 si ČES připomene dvacet let od svého založení. Devatenáctý kongres České endodontické společnosti je plánován na 24. a 25. září 2027. Naváže na tradici, která začala prvním kongresem v roce 2009, i na původní poslání společnosti: propojovat kolegy, sdílet zkušenosti a přispívat ke kvalitě endodontické péče.
 
 
 

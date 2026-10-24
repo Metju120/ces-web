@@ -5,7 +5,7 @@ BASE='https://endodont.cz/'
 PAGES={
 'index.html':('Česká endodontická společnost – vzdělávání a kongres','Odborné vzdělávání v endodoncii, kongres ČES, přednášky a členství. Pro zubní lékaře, kteří chtějí rozvíjet své znalosti a sdílet zkušenosti.'),
 'camilleri.html':('Josette Camilleri: MTA a biokeramické sealery 2027','Přednáška prof. Josette Camilleri 19. 3. 2027 v Praze. Program, ceny a registrace. Simultánní tlumočení, 5 kreditů ČSK. Pro členy i nečleny.'),
-'kongres.html':('19. kongres ČES 2027 – 17.–18. září','19. výroční kongres České endodontické společnosti proběhne 17.–18. září 2027. Uložte si termín; program, místo a registraci připravujeme.'),
+'kongres.html':('19. kongres ČES 2027 – 24.–25. září','19. výroční kongres České endodontické společnosti proběhne 24.–25. září 2027. Uložte si termín; program, místo a registraci připravujeme.'),
 'clenstvi.html':('Členství v ČES – přínosy, příspěvek a přihláška','Proč se stát členem České endodontické společnosti: odborná setkávání, sdílení zkušeností a členské ceny vybraných akcí. Podmínky a přihláška.'),
 'prihlaska.html':('Online přihláška do České endodontické společnosti','Vyplňte přihlášku do ČES. Sekretariát vás kontaktuje s dalším postupem členství a platebními pokyny.'),
 'vzdelavani.html':('Endodoncie: přednášky a odborné vzdělávání','Vzdělávací akce České endodontické společnosti, kongres, Občasník a odborné zdroje pro zubní lékaře. Programy a informace k účasti.'),
@@ -21,7 +21,7 @@ PAGES={
 'kontakt.html':('Kontakt a sekretariát ČES','Kontaktní údaje České endodontické společnosti. Sekretariát pro dotazy k členství, odborným akcím a činnosti společnosti.'),
 'materialy.html':('Endodoncie – odborné materiály a doporučení ČES','Archiv odborných dokumentů ČES ke stažení: příprava zubu, výplachový protokol a hodnocení endodontické léčby. U dokumentů zohledněte rok vydání.'),
 'ochrana-udaju.html':('Ochrana osobních údajů ČES','Informace o zpracování osobních údajů při podání přihlášky do České endodontické společnosti a kontakt na správce údajů.'),
-'english.html':('Czech Endodontic Society – education and congress','The Czech Endodontic Society: professional education and collaboration. The 19th Annual Congress takes place on 17–18 September 2027.'),
+'english.html':('Czech Endodontic Society – education and congress','The Czech Endodontic Society: professional education and collaboration. The 19th Annual Congress takes place on 24–25 September 2027.'),
 'obcasnik.html':('Občasník ČES – časopis a archiv 2023–2026','Čtěte Občasník České endodontické společnosti. Aktuální vydání 2026 a archiv ročníků 2023–2025 přímo online nebo jako PDF ke stažení.')}
 ORG={'@type':'Organization','@id':BASE+'#organization','name':'Česká endodontická společnost','alternateName':'Czech Endodontic Society','url':BASE,'logo':BASE+'assets/logo-ces.webp','sameAs':['https://www.facebook.com/endodoncie/','https://www.instagram.com/endodont_cz/','https://x.com/endodont_cz']}
 def metadata(page,title,desc,production):
