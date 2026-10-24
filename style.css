@@ -46,3 +46,32 @@ h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing
 @media(max-width:600px){.header{grid-template-columns:minmax(0,290px) auto;padding:16px 0;gap:8px 12px}.hero-grid{display:grid;grid-template-columns:1fr;padding:34px 0 65px;gap:0}.hero h1{font-size:clamp(40px,10.7vw,57px);letter-spacing:-.045em}.hero-purpose{font-size:16px;margin:18px 0}.hero .eyebrow{margin-bottom:14px}.anniversary-art.final-emblem{height:220px;margin:16px auto -15px;max-width:350px}.final-emblem img{width:100%;max-width:100%}.featured-events{margin-top:-30px;padding:0}.featured-grid{grid-template-columns:1fr;gap:18px}.featured-card{padding:20px}.lecture-portrait{height:260px;object-position:center 22%}.lecture-card{gap:22px}.lecture-copy .eyebrow{margin-bottom:12px}.lecture-card h3{font-size:33px}.lecture-facts{font-size:14px;margin:18px 0}.lecture-copy>.button{margin-top:4px}.congress-photo img{height:170px}.congress-card h3{font-size:30px}.home-calendar{padding:32px 0}.home-calendar .section-head{gap:12px}.calendar-columns{grid-template-columns:1fr;gap:20px}.calendar-item{border:0;border-bottom:1px solid var(--line);padding:0 0 20px;grid-template-columns:88px 1fr auto}.calendar-item time strong{font-size:36px}.calendar-item h3{font-size:16px}.calendar-columns .calendar-item:nth-child(2){border-bottom:1px solid var(--line)}.calendar-all{grid-column:auto;border:0;padding:0}.resource-shortcuts{grid-template-columns:1fr;padding:12px 0}.resource-shortcuts>a,.resource-shortcuts>a:first-child,.resource-shortcuts>a:last-child{border:0;border-bottom:1px solid #cfdfed;padding:18px 0;gap:18px}.resource-shortcuts>a:last-child{border:0}.resource-shortcuts strong{font-size:16px}.resource-shortcuts small{font-size:13px}.home-membership{grid-template-columns:1fr;gap:25px;padding:36px 0}.home-membership h2{font-size:36px}.footer-grid{grid-template-columns:1fr;gap:25px}.footer-brand img{width:210px}.footer-meta{grid-column:auto;font-size:11px}.footer-meta .social-links{float:none;justify-content:flex-start;margin-bottom:16px}}
 .button:has(>span[aria-hidden])::after{display:none}
 @media(max-width:850px){.header .nav{grid-column:1/-1;grid-row:auto;justify-self:stretch;white-space:normal}.header .nav.open{display:flex;flex-direction:column;align-items:stretch}.header .nav a{display:block}}
+
+/* Historic 20-year editorial article: screen and print */
+.history-article{max-width:100%;line-height:1.78}
+.history-article h2{margin-top:2.7rem;margin-bottom:1rem}
+.history-article h3{margin-top:2rem;margin-bottom:.8rem}
+.history-article p{max-width:78ch;margin-bottom:1.1rem}
+.history-table-scroll{max-width:100%;overflow-x:auto;margin:1.2rem 0 2.1rem;border:1px solid #dce6f0;border-radius:13px}
+.history-table{width:100%;border-collapse:collapse;min-width:510px;font-size:.94rem;line-height:1.6}
+.history-table th{background:#eaf3fc;color:#24476b;text-align:left;font-weight:700}
+.history-table th,.history-table td{padding:.86rem 1rem;vertical-align:top;border-bottom:1px solid #dce6f0}
+.history-table tbody tr:nth-child(even){background:#f7fafd}
+.history-table tbody tr:last-child td{border-bottom:0}
+.history-table td:first-child{font-weight:650;white-space:nowrap;width:135px}
+.history-photo-placeholder{max-width:760px;margin:2rem auto 2.2rem}
+.history-photo-box{aspect-ratio:16/9;background:linear-gradient(145deg,#eef4fa,#dceaf7);border:1px dashed #86aaca;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.65rem;color:#557a9d;text-align:center}
+.history-photo-box svg{width:46px;height:46px;opacity:.7}
+.history-photo-box span{font-size:.9rem;font-weight:650}
+.history-photo-placeholder figcaption{padding-top:.65rem;font-size:.85rem;color:#607187;line-height:1.5}
+@media(max-width:620px){.history-table-scroll{margin-left:-4px;margin-right:-4px}.history-table{font-size:.87rem}.history-table th,.history-table td{padding:.65rem .7rem}.history-article h2{margin-top:2.1rem}}
+@media print{
+ .history-article{color:#111;font-size:10.5pt;line-height:1.45}
+ .history-article h2,.history-article h3{color:#111;break-after:avoid}
+ .history-table-scroll{overflow:visible;border:0;border-radius:0;break-inside:avoid}
+ .history-table{min-width:0;font-size:8.4pt}
+ .history-table th{background:#eee!important;color:#111}
+ .history-table th,.history-table td{border:1px solid #bbb;padding:5pt}
+ .history-photo-box{background:#f7f7f7!important;border:1px dashed #aaa}
+ .history-photo-placeholder{max-width:100%;break-inside:avoid}
+}
