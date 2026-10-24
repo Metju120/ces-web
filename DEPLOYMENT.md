@@ -47,11 +47,11 @@ Veřejná sekce IFEA obsahuje připomínku 16. října a české heslo „Zachov
 ## Finální sestavení a SEO (24. 10. 2026)
 
 - `python build.py`: GitHub preview, každá stránka má `noindex,follow`. Robots dovoluje načtení, aby vyhledávače mohly noindex přečíst.
-- `python build.py --production`: vytvoří kompletní adresář `release/` pro https://endodont.cz/, včetně HTML, assets, dokumentů, PHP, sitemap.xml, robots.txt a .htaccess. Na hosting nahrávat **obsah release/**, nikoli HTML z kořene repozitáře (to je neindexovaný náhled).
+- `python build.py --production`: vytvoří kompletní adresář `release/` pro https://www.endodont.cz/, včetně HTML, assets, dokumentů, PHP, sitemap.xml, robots.txt a .htaccess. Na hosting nahrávat **obsah release/**, nikoli HTML z kořene repozitáře (to je neindexovaný náhled).
 - Produkční HTML obsahuje `index,follow`, canonical adresy, vlastní titulky/popisy a sociální metadata. Strukturovaná data Organization a BreadcrumbList; úplný Event u Camilleri. Kongres nemá Event, dokud není známá skutečná adresa místa konání.
 - .htaccess obsahuje odpovídající staré adresy pro hlavní sekce, Camilleri a původní PDF. Před nasazením pravidla sloučit se stávající konfigurací hostingu, zachovat funkční subdomény a ověřovací soubory Search Console. Pravidla jsou připravena pro Apache/mod_rewrite a cílový kořen domény, nikoli GitHub Pages.
 - Staré jednotlivé kongresy a historické přednášky nepřesměrovávat na aktuální kongres 2027. Jejich texty jsou nyní v archivu, mapování v content/redirects-archiv.json. Převod zachovává programy a zprávy, výrazně označuje minulost a neobsahuje aktivní staré registrační formuláře.
-- Po nasazení ověřit HTTPS, www → bez www, 301 konkrétních starých odkazů, dostupnost PDF a registračních/obchodních odkazů; odeslat sitemapu v Search Console a ověřit Camilleri v Rich Results Test.
+- Po nasazení ověřit HTTPS, bez www → www, 301 konkrétních starých odkazů, dostupnost PDF a registračních/obchodních odkazů; odeslat sitemapu v Search Console a ověřit Camilleri v Rich Results Test.
 
 ## Ověřený obsah a otevřené údaje
 
@@ -65,3 +65,26 @@ Veřejná sekce IFEA obsahuje připomínku 16. října a české heslo „Zachov
 app.js emituje pouze v paměti prohlížeče události `ces:metric`: `registration_click`, `membership_form_open`, `membership_submission_accepted`. Neobsahují osobní údaje, nic neodesílají a nevytvářejí cookies. Poslední událost znamená přijetí formuláře serverem, nikoli vznik členství ani ověřené doručení pošty.
 
 Před skutečným měřením připojit zvolený analytický systém a sladit informace o soukromí s jeho nastavením. Dokončené registrace/objednávky ověřovat v SimpleShopu; proklik na tlačítko není objednávka. Search Console vyžaduje přístup k ověřené doméně; není zde připojena.
+
+
+## Převod na www.endodont.cz a rušení starých subdomén (24. 10. 2026)
+
+**Kanoniální adresa:** https://www.endodont.cz/; bez-www varianta přesměrovává na www s HTTP 301. `seo.py` generuje odpovídající canonical, sitemap, Open Graph/JSON-LD a produkční `.htaccess`. Při nahrání na Český hosting ponechat v administraci již nastavené přesměrování `endodont.cz → www.endodont.cz`; nesmí současně existovat opačné přesměrování.
+
+### Stav záloh – před odstraněním NEÚPLNÉ
+
+- `casopis.endodont.cz`: hlavní obsah Občasníku 2023, 2024, 2025 byl přenesen jako PDF do `dokumenty/`, nově je na webu i vydání 2026. Není ověřeno kompletní převzetí původního PHP prohlížeče a všech historických URL a assetů. Před vypnutím zachovat veřejné URL jednotlivých PDF a `/obcasnik_2023.php`, `/obcasnik_2024.php`, `/obcasnik_2025.php` vhodnými 301 přesměrováními.
+- `kongres.endodont.cz`: historický program 18. kongresu ČES 2026 **není** v archivu nového webu úplný; v `content/archiv.json` je u položky pouze `<p>Registrace</p>`. Nejsou přeneseny ani plné texty `/obchodni-podminky.html` a `/podminky-ochrany-osobnich-udaju.html`. Současný obsah `content/camilleri.html` na obě stránky odkazuje. Nejprve uchovat a publikovat jejich věrné kopie pod hlavní doménou, pak přesně přesměrovat staré URL na nové; obecný redirect celého `kongres.` před tím není bezpečný.
+- `form.endodont.cz`: funkční aplikace klasifikace obtížnosti endodontického případu, včetně bodování, souhrnu, e-mailového odeslání a příloh, není součástí tohoto repozitáře. `build.py` na ni pouze odkazuje. Potřebujeme skutečný export zdrojových souborů (včetně neveřejných konfigurací a případných databází), popis provozu, test doručování a funkční náhradu na www. Do té doby ponechat subdoménu v provozu.
+- Původní hlavní web byl provozován u Poski.com. Záloha souborů z Českého hostingu **nezahrnuje automaticky** programové soubory a databázi Poski. Úplnost archivu hlavního původního webu nebyla prokázána.
+
+### Bezpečný postup a kontroly před smazáním dat
+
+1. Zhotovit samostatnou datovanou offline zálohu každé subdomény a původního hostingu (webové soubory včetně skrytých souborů, SQL exporty, certifikáty pouze podle potřeby, konfigurace bez zveřejňování hesel). Vyžádat export Poski, pokud není k dispozici. Citlivé zálohy neukládat do veřejného GitHub repozitáře.
+2. Zálohy stáhnout mimo hosting, rozbalit kontrolní vzorek, ověřit úplnost i právo čtení; nepočítat pouze s tím, že poskytovatel historicky uchovává automatické zálohy. Český hosting: Domény a hosting → Zálohy, zpřístupnění přes SFTP/SSH adresář `backups`.
+3. Dodat na www odpovídající archiv kongresu 2026, obchodní podmínky a GDPR; funkční ekvivalent klasifikace endodontických případů včetně odeslání. Opravit interní odkazy.
+4. Až poté nastavit 301 přesměrování samostatných subdomén na obsahově odpovídající konkrétní nové URL, na každé subdoméně zvlášť nebo pomocí nastavení hostingu. Produkční `.htaccess` hlavní domény **není** automaticky platný pro oddělené subdomény.
+5. Subdomény **nemazat z administrace/DNS**, pokud z nich mají dál fungovat HTTP 301 přesměrování: k přesměrování musí dál existovat platné DNS, HTTPS certifikát a přijímající webserver. Mazat jen nepotřebné staré soubory po ověřené záloze a funkčním redirectu.
+6. Ověřit staré odkazy, aktuální formuláře a testovací doručení e-mailů; DNS pošty (MX, SPF, DKIM, DMARC) ponechat. Hlavní doménu přepnout z Poski na Český hosting až po ověření produkčního webu; otestovat www, apex, HTTPS, sitemap, 301 i členství.
+
+**Status k 24. 10. 2026:** kanonická adresa na GitHubu upravena; **subdomény nebyly přesměrovány ani smazány**, žádné staré soubory ani databáze nebyly odstraněny a úplný export starých služeb dosud nebyl doložen.
