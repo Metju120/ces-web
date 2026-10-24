@@ -25,9 +25,9 @@ První kongres České endodontické společnosti se uskutečnil 3. října 2009
 
 K výrazným okamžikům patřil desátý kongres, který se konal 21. a 22. září 2018. Páteční přednášku Mahmouda Torabinejada v Obecním domě připravila ČES ve spolupráci s Pražskými dentálními dny. Sobotní program pokračoval v hotelu Pyramida. Při slavnostním setkání byl oceněn Luděk Peřinka za přínos české endodoncii a vznikla Cena Luďka Peřinky, určená k ocenění mimořádných zásluh o obor.
 
-[[FOTO: Cena Luďka Peřinky | Detail ocenění spojeného s desátým kongresem ČES (2018).]]
+[[OBRAZEK: assets/historie/10-kongres-2018-cena-ludka-perinky.webp | Detail Ceny Luďka Peřinky s věnováním a rokem 2018 | Cena Luďka Peřinky – detail ocenění z 10. kongresu ČES (2018).]]
 
-[[FOTO: Předání Ceny Luďka Peřinky | Slavnostní ocenění Luďka Peřinky během 10. kongresu ČES (2018).]]
+[[OBRAZEK: assets/historie/10-kongres-2018-predani-ceny-ludka-perinky.webp | Luděk Peřinka s oceněním během 10. kongresu ČES | Slavnostní ocenění Luďka Peřinky během 10. kongresu ČES (2018).]]
 
 Mezi významné zahraniční hosty kongresů ČES patřili L. Stephen Buchanan, Jean-Philippe Mallet, Mahmoud Torabinejad, Domenico Ricucci, John Stropko, Shanon Patel, Fabio Gorni a Matthias Zehnder.
 

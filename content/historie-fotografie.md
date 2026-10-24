@@ -16,3 +16,9 @@ Snímky dodané pro historický článek (24. 10. 2026). Ořezy byly provedeny p
 Všechny fotografie jsou v `assets/historie/`. Čísla kongresů vycházejí z původních názvů souborů s výjimkou snímku dvojice u stolu, který uživatel opravil na 3. kongres (přes původní označení „4. kongres 2.jpg“); identita jednotlivých osob na snímcích není z fotografie odvozována.
 
 **Pozor:** Fotografie z 6. kongresu (2014), na níž je zachycen předávaný předmět, není dokladem předání Ceny Luďka Peřinky z 10. kongresu (2018). Pro cenu a její předání zůstávají samostatné zástupné obrazové pozice. Stejně tak není dosud vybrána fotografie současného výročního kongresu.
+
+
+## Cena Luďka Peřinky – doplněno
+- `10-kongres-2018-cena-ludka-perinky.webp`: příloha `06.JPG`, detail ceny s rokem 2018.
+- `10-kongres-2018-predani-ceny-ludka-perinky.webp`: příloha `05.JPG`, slavnostní ocenění na 10. kongresu 2018.
+Obě fotografie jsou vložené; starší poznámka o jejich chybění již neplatí.
