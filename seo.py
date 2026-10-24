@@ -30,7 +30,7 @@ ORG={'@type':'Organization','@id':BASE+'#organization','name':'Česká endodonti
 def metadata(page,title,desc,production):
  title,desc=PAGES.get(page,(title,desc));url=BASE+('' if page=='index.html' else page)
  asset_base=BASE if production else 'https://metju120.github.io/ces-web/'
- image='assets/camilleri.webp' if page=='camilleri.html' else 'assets/casopis/obcasnik-2026-mockup.jpg' if page=='obcasnik.html' else 'assets/kongres-ces-archiv.jpg'
+ image='assets/o2-universum.jpg' if page=='kongres.html' else 'assets/camilleri.webp' if page=='camilleri.html' else 'assets/casopis/obcasnik-2026-mockup.jpg' if page=='obcasnik.html' else 'assets/kongres-ces-archiv.jpg'
  graph=[ORG,{'@type':'WebPage','@id':url+'#webpage','url':url,'name':title,'description':desc,'inLanguage':'en' if page=='english.html' else 'cs','publisher':{'@id':BASE+'#organization'}}]
  if page!='index.html':graph.append({'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Úvod','item':BASE},{'@type':'ListItem','position':2,'name':title,'item':url}]})
  if page=='camilleri.html':
