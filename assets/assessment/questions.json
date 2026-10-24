@@ -1,0 +1,384 @@
+{
+  "method": "Klasifikace endodontických případů podle stupně obtížnosti a rizik",
+  "source": "Původní formulář form.endodont.cz, česká sada otázek",
+  "groups": [
+    {
+      "name": "A. Vliv pacienta",
+      "questions": [
+        {
+          "name": "Anamnéza / anestezie / spolupráce",
+          "class1": [
+            {
+              "name": "Bez obtíží (ASA Class I)"
+            }
+          ],
+          "class2": [
+            {
+              "name": "Zvláštní pozornost: pacemaker / alergie na ATB (ACA ClassII)"
+            },
+            {
+              "name": "Intolerance vasokonstriktorů"
+            },
+            {
+              "name": "Nedostatek spolupráce / strach"
+            }
+          ],
+          "class3": [
+            {
+              "name": "Komplexní anamnéza / závažné onemocnění / hendikep (ASA Classes III and IV)"
+            },
+            {
+              "name": "Intolerance anestetik"
+            },
+            {
+              "name": "Rezistence k anestetikům"
+            }
+          ]
+        },
+        {
+          "name": "Diagnóza",
+          "class1": [
+            {
+              "name": "Jednoznačné příznaky: jasná diagnóza"
+            }
+          ],
+          "class2": [
+            {
+              "name": "Diferenciální Dg obvyklých projevů a příznaků"
+            }
+          ],
+          "class3": [
+            {
+              "name": "Komplexní nebo odporující si příznaky: obtížná Dg"
+            },
+            {
+              "name": "Neurčitelná Dg"
+            }
+          ]
+        },
+        {
+          "name": "Otevírání úst a fyzická omezení",
+          "class1": [
+            {
+              "name": "Normální otevírání úst (nad 35mm)"
+            }
+          ],
+          "class2": [
+            {
+              "name": "Omezené otevírání (25-35mm)"
+            },
+            {
+              "name": "Obtížně umístitelný film"
+            }
+          ],
+          "class3": [
+            {
+              "name": "Kontraktura (25mm a méně)"
+            },
+            {
+              "name": "Omezené sklonění křesla s pacientem"
+            }
+          ]
+        },
+        {
+          "name": "Radiologická omezení",
+          "class1": [
+            {
+              "name": "Obvyklý stav"
+            }
+          ],
+          "class2": [
+            {
+              "name": "Zvýš. dávivý reflex"
+            },
+            {
+              "name": "Vysoko umístěná spodina úst (dolní premoláry a špičáky)"
+            },
+            {
+              "name": "Úzké nebo nízké spodní patro"
+            }
+          ],
+          "class3": [
+            {
+              "name": "Těžko rozlišitelné překrývajícíse anatomické struktury"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "B. Vliv zubů",
+      "questions": [
+        {
+          "name": "Pozice v oblouku a sklon",
+          "class1": [
+            {
+              "name": "Fronta a premoláry"
+            },
+            {
+              "name": "Malý sklon (méně jak 10 &deg;)"
+            },
+            {
+              "name": "Malá rotace (méně jak 10 &deg;)"
+            }
+          ],
+          "class2": [
+            {
+              "name": "1. nebo 2. molár"
+            },
+            {
+              "name": "Střední sklon (10 - 30 &deg;)"
+            },
+            {
+              "name": "Střední rotace (10 - 30 &deg;)"
+            }
+          ],
+          "class3": [
+            {
+              "name": "3. molár"
+            },
+            {
+              "name": "Extrémní sklon (více jak 30 &deg;)"
+            },
+            {
+              "name": "Extrémní rotace (více jak 30 &deg;)"
+            }
+          ]
+        },
+        {
+          "name": "Izolace zubu a přístup / morfologické aberace korunky",
+          "class1": [
+            {
+              "name": "Normální morfologie"
+            },
+            {
+              "name": "Snadná izolace"
+            },
+            {
+              "name": "Stabilní svorka"
+            }
+          ],
+          "class2": [
+            {
+              "name": "Taurodontismus / microdens"
+            },
+            {
+              "name": "Menší výkon nutný pro izolaci zubu"
+            },
+            {
+              "name": "Nestabilní svorka (žádná retence)"
+            }
+          ],
+          "class3": [
+            {
+              "name": "Fůze / dens in dente"
+            },
+            {
+              "name": "Rozsáhlý výkon nutný k izolaci zubu"
+            },
+            {
+              "name": "Omezený přístup (čep, nástavba, zalomený nástroj)"
+            },
+            {
+              "name": "Metalokeramika, dlahování zubů"
+            },
+            {
+              "name": "Neumístitelná svorka"
+            }
+          ]
+        },
+        {
+          "name": "Kanálek a tvar kořene",
+          "class1": [
+            {
+              "name": "Rovný průběh kanálku"
+            },
+            {
+              "name": "Malý nebo žádný úhel v průběhu kanálku"
+            },
+            {
+              "name": "Jednokořenový frontální zub nebo premolár"
+            },
+            {
+              "name": "Uzavřený apex"
+            }
+          ],
+          "class2": [
+            {
+              "name": "Kanálek tvaru J"
+            },
+            {
+              "name": "Střední zahnutí(10-10<sup>o</sup>)"
+            },
+            {
+              "name": "Molár - 3 nebo méně kanálků"
+            },
+            {
+              "name": "Premolár nebo fronta - 2 kanálky"
+            },
+            {
+              "name": "Dříve započaté ošetření"
+            },
+            {
+              "name": "Osa korunky odlišná od osy kořene"
+            },
+            {
+              "name": "Kanálek : 25mm dlouhý"
+            }
+          ],
+          "class3": [
+            {
+              "name": "Kanálek tvaru S"
+            },
+            {
+              "name": "Extrémní zakřivení (+30<sup>o</sup>)"
+            },
+            {
+              "name": "Molár - 4 a více kanálků"
+            },
+            {
+              "name": "Premolár - 3 kanálky"
+            },
+            {
+              "name": "Rozdělený  kanálek ve střední nebo apikální 1/3"
+            },
+            {
+              "name": "Kanálek tvaru C"
+            },
+            {
+              "name": "Vnitřní stěna kanálku na rtg ? 2 mm tlustá"
+            },
+            {
+              "name": "Otevřený apex"
+            }
+          ]
+        },
+        {
+          "name": "Kalcifikace / obliterace",
+          "class1": [
+            {
+              "name": "Široký a prázdný kanálek"
+            }
+          ],
+          "class2": [
+            {
+              "name": "Kanálek a dutina jsou zmenšené ale viditelné"
+            },
+            {
+              "name": "Dentikly"
+            }
+          ],
+          "class3": [
+            {
+              "name": "Téměř neviditelný kanálek nebo jeho část"
+            },
+            {
+              "name": "Nepokračující kanálek"
+            }
+          ]
+        },
+        {
+          "name": "Resorbce",
+          "class1": [],
+          "class2": [
+            {
+              "name": "Vnitřní resorbce bez perforace"
+            },
+            {
+              "name": "Apikální resorbce"
+            }
+          ],
+          "class3": [
+            {
+              "name": "Interní resorbce s perforací"
+            },
+            {
+              "name": "Externí resorbce s nebo bez perforace"
+            }
+          ]
+        },
+        {
+          "name": "Via falsa",
+          "class1": [],
+          "class2": [
+            {
+              "name": "Supraalveolární via falsa"
+            }
+          ],
+          "class3": [
+            {
+              "name": "Intraalveolární via falsa"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "C. Další faktory",
+      "questions": [
+        {
+          "name": "Trauma a anamnéze",
+          "class1": [
+            {
+              "name": "Nekomplikovaná fraktura korunky"
+            },
+            {
+              "name": "Fraktura kořene v apikální 1/3"
+            },
+            {
+              "name": "V anamnéze kontuze zubu"
+            }
+          ],
+          "class2": [
+            {
+              "name": "Komplikovaná fraktura zubu s dokončeným vývojem"
+            },
+            {
+              "name": "Fraktura střední 1/3 kořene"
+            },
+            {
+              "name": "Subluxace nebo fraktura alvolu v anamnéze"
+            }
+          ],
+          "class3": [
+            {
+              "name": "Komplikovaná fraktura zubu s nedokončeným vývojem"
+            },
+            {
+              "name": "Fraktura koronární 1/3 kořene"
+            },
+            {
+              "name": "Luxace / avulze"
+            }
+          ]
+        },
+        {
+          "name": "Retreatment",
+          "class1": [],
+          "class2": [],
+          "class3": [
+            {
+              "name": "Retreatment"
+            }
+          ]
+        },
+        {
+          "name": "Parodont",
+          "class1": [],
+          "class2": [],
+          "class3": [
+            {
+              "name": "Viklavost, chobot, dehiscence, fenestrace"
+            },
+            {
+              "name": "Furkace"
+            },
+            {
+              "name": "Resekce nebo hemisekce (hotová nebo očekávaná)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
