@@ -3,7 +3,7 @@
 
 Česká endodontická společnost vznikla 28. května 2007 v Praze. Její přípravný výbor tvořili Luděk Peřinka, Lenka Roubalíková a Jan Netolický. Spojoval je zájem o rozvoj endodoncie, kvalitní vzdělávání a spolupráci mezi lékaři z praxe a univerzitních pracovišť. Prvním předsedou společnosti se stal Luděk Peřinka.
 
-Nová společnost navázala také na předchozí práci endodontické odborné skupiny při České stomatologické společnosti ČLS JEP. K jejich spojení došlo na plenárním zasedání 10. října 2007. Čestné členství tehdy přijaly Martina Kukletová a Eva Záhlavová jako ocenění své dlouholeté práce pro českou endodoncii.
+Nová společnost navázala také na předchozí práci endodontické odborné skupiny při České stomatologické společnosti ČLS JEP. K jejich spojení došlo na plenárním zasedání 10. října 2007. Čestné členství tehdy přijaly prof. MUDr. Martina Kukletová, CSc., a doc. MUDr. Eva Záhlavová, CSc., jako ocenění své dlouholeté práce pro českou endodoncii.
 
 ### Setkávání, vzdělávání a první kongres
 
@@ -41,7 +41,7 @@ Společnost během své historie vedli tři prezidenti: Luděk Peřinka v letech
 
 ### Jak se rozvíjela členská základna
 
-Podle dochované členské databáze lze pro rok 2007 doložit 15 evidovaných členů včetně čestných členů. Podle ročních hlášení ESE měla ČES 54 členů v roce 2016, 67 v roce 2023 a 86 v roce 2026.
+Podle dochované členské databáze evidovala ČES v roce 2007 celkem 15 členů včetně dvou čestných a v roce 2012 již 32 členů včetně dvou čestných. Podle ročních hlášení ESE měla společnost 54 členů v roce 2016, 67 v roce 2023 a 86 v roce 2026.
 
 [[FOTO: Kongres ČES dnes | Fotografie z výročního kongresu ČES v O₂ universu.]]
 
@@ -53,81 +53,57 @@ V roce 2027 si ČES připomene dvacet let od svého založení. Devatenáctý ko
 
 ## Lidé, kteří společnost vedli a rozvíjeli
 
-Za každým obdobím stojí práce konkrétních lidí. Následující přehled uvádí celé složení výboru a revizní komise při jednotlivých volbách i doložené změny v průběhu funkčních období.
-
+Následující tabulky zachycují výbor a revizní komisi v jednotlivých funkčních obdobích. Při personální změně je v tabulce uveden člověk, který v daném období působil déle; změny a původní obsazení jsou popsány pod tabulkou. U jednotlivých jmen je uvedena vykonávaná funkce.
 
 ### První období: 2007–2011
 
-| Orgán | Členové zvolení pro období |
+| Orgán | Členové a jejich funkce |
 |---|---|
-| Výbor | doc. MUDr. Luděk Peřinka, CSc.<br>doc. MUDr. Lenka Roubalíková, Ph.D.<br>MUDr. Jan Netolický, Ph.D.<br>MUDr. Simona Ságlová, Ph.D. a MUDr. Tomáš Horák. |
-| Revizní komise | Eva Záhlavová<br>MUDr. Lenka Hofreiterová a MUDr. Štěpán Gála. Předsedkyní byla Eva Záhlavová. |
+| Výbor | doc. MUDr. Luděk Peřinka, CSc. – předseda společnosti<br>doc. MUDr. Lenka Roubalíková, Ph.D. – vědecká sekretářka<br>MUDr. Jan Netolický, Ph.D. – hospodář<br>MUDr. Simona Ságlová, Ph.D. – členka výboru, od roku 2009 prezidentka kongresu<br>MUDr. Tomáš Horák – člen výboru |
+| Revizní komise | MUDr. Jan Baštecký – člen revizní komise<br>MUDr. Lenka Hofreiterová – členka revizní komise<br>MUDr. Štěpán Gála – člen revizní komise |
 
-Předsedou byl Luděk Peřinka, vědeckou sekretářkou Lenka Roubalíková a hospodářem Jan Netolický. Od prvního kongresu v roce 2009 zastávala funkci prezidentky kongresu Simona Ságlová.
-
-Po přijetí čestného členství Evy Záhlavové v říjnu 2007 bylo třeba revizní komisi doplnit. V průběhu tohoto prvního období v ní působil také Jan Baštecký, jehož členství je doloženo v roce 2010.
+**Zakládající revizní komise:** Její první předsedkyní byla doc. MUDr. Eva Záhlavová, CSc. Po přijetí čestného členství v říjnu 2007 bylo její místo třeba obsadit znovu. Jan Baštecký je jako člen revizní komise doložen v roce 2010; přesné datum jeho nástupu není potvrzeno.
 
 ### Druhé období: 2011–2015
 
 Ve volbách 5. března 2011 se počet členů výboru rozšířil z pěti na sedm.
 
-| Orgán | Členové zvolení pro období |
+| Orgán | Členové a jejich funkce |
 |---|---|
-| Výbor | doc. MUDr. Luděk Peřinka, CSc.<br>doc. MUDr. Lenka Roubalíková, Ph.D.<br>MUDr. Jan Netolický, Ph.D.<br>MUDr. Simona Ságlová, Ph.D.<br>MUDr. Tomáš Horák<br>MUDr. Filip Světlík a MUDr. Martin Dančík. |
-| Revizní komise | MUDr. Lenka Hofreiterová<br>MUDr. Jan Baštecký a MUDr. Štěpán Gála. |
+| Výbor | doc. MUDr. Luděk Peřinka, CSc. – předseda společnosti<br>doc. MUDr. Lenka Roubalíková, Ph.D. – vědecká sekretářka do roku 2013<br>MUDr. Jan Netolický, Ph.D. – hospodář<br>MUDr. Simona Ságlová, Ph.D. – prezidentka kongresu<br>MUDr. Tomáš Horák – člen výboru<br>MUDr. Filip Světlík – člen výboru<br>MUDr. Martin Dančík – člen výboru, od roku 2013 vědecký sekretář |
+| Revizní komise | MUDr. Lenka Hofreiterová – členka revizní komise<br>MUDr. Jan Baštecký – člen revizní komise<br>MUDr. Štěpán Gála – člen revizní komise |
 
-Předsedou zůstal Luděk Peřinka, vědeckou sekretářkou Lenka Roubalíková, hospodářem Jan Netolický a prezidentkou kongresu Simona Ságlová.
-
-**Změna v roce 2013:** Lenka Roubalíková odstoupila z výboru 23. března 2013. Funkci vědeckého sekretáře převzal Martin Dančík, který byl členem výboru již od voleb v roce 2011. Na členské schůzi v Třeboni 15. června 2013 byla na uvolněné místo ve výboru zvolena Soňa Hűttnerová.
+**Změna v roce 2013:** Lenka Roubalíková odstoupila z výboru 23. března 2013. Funkci vědeckého sekretáře převzal Martin Dančík, který byl členem výboru již od voleb v roce 2011. Na uvolněné místo ve výboru byla 15. června 2013 v Třeboni zvolena MUDr. Soňa Hűttnerová. V tabulce zůstává Lenka Roubalíková, která místo ve výboru zastávala delší část funkčního období.
 
 ### Třetí období: 2015–2019
 
-| Orgán | Členové zvolení pro období |
+| Orgán | Členové a jejich funkce |
 |---|---|
-| Výbor | MUDr. Daniel Černý, Ph.D.<br>MUDr. Martin Dančík<br>MUDr. Jan Baštecký<br>doc. MUDr. Luděk Peřinka, CSc.<br>MUDr. Soňa Hűttnerová<br>MUDr. Jan Šváb a MUDr. Filip Světlík. |
-| Revizní komise | MUDr. Štěpán Gála<br>MUDr. Lenka Hofreiterová a MDDr. Aristotelis Jakovidis. Předsedou byl MUDr. Štěpán Gála. |
-
-Prezidentem se stal Daniel Černý, vědeckým sekretářem Martin Dančík, hospodářem Jan Baštecký a prezidentkou kongresu Soňa Hűttnerová.
+| Výbor | MUDr. Daniel Černý, Ph.D. – prezident společnosti<br>MUDr. Martin Dančík – vědecký sekretář<br>MUDr. Jan Baštecký – hospodář<br>doc. MUDr. Luděk Peřinka, CSc. – člen výboru<br>MUDr. Soňa Hűttnerová – prezidentka kongresu<br>MUDr. Jan Šváb – člen výboru<br>MUDr. Filip Světlík – člen výboru |
+| Revizní komise | MUDr. Štěpán Gála – předseda revizní komise<br>MUDr. Lenka Hofreiterová – členka revizní komise<br>MDDr. Aristotelis Jakovidis – člen revizní komise |
 
 ### Čtvrté období: 2019–2023
 
-| Orgán | Členové zvolení pro období |
+| Orgán | Členové a jejich funkce |
 |---|---|
-| Výbor | MUDr. Daniel Černý, Ph.D.<br>MDDr. Radovan Žižka, Ph.D.<br>MUDr. Simona Ságlová, Ph.D.<br>doc. MUDr. Luděk Peřinka, CSc.<br>MUDr. Soňa Hűttnerová<br>MUDr. Jan Šváb a MUDr. Jan Baštecký. |
-| Revizní komise | MUDr. Martin Dančík<br>MUDr. Jelena Lerchová a MDDr. Aristotelis Jakovidis. V tomto období komisi předsedal MUDr. Martin Dančík. |
+| Výbor | MUDr. Daniel Černý, Ph.D. – prezident společnosti<br>MDDr. Radovan Žižka, Ph.D. – vědecký sekretář<br>MUDr. Simona Ságlová, Ph.D. – hospodářka<br>doc. MUDr. Luděk Peřinka, CSc. – člen výboru<br>MUDr. Soňa Hűttnerová – prezidentka kongresu<br>MUDr. Jan Šváb – člen výboru<br>Dr. Aleksandra Paklos – členka výboru |
+| Revizní komise | MUDr. Martin Dančík – předseda revizní komise<br>MDDr. Aristotelis Jakovidis – člen revizní komise<br>MDDr. Alexandr Čech – člen revizní komise |
 
-Prezidentem zůstal Daniel Černý, vědeckým sekretářem se stal Radovan Žižka, hospodářkou Simona Ságlová a prezidentkou kongresu zůstala Soňa Hűttnerová.
+**Změna ve výboru v roce 2019:** Jan Baštecký po zvolení odstoupil a podle výsledků voleb jej nahradila Aleksandra Paklos. Změnu zachycuje zápis z výjezdního zasedání 8. června 2019 v Ostravě.
 
-**Změna ve výboru v roce 2019:** Po odstoupení Jana Bašteckého nastoupila na jeho místo Aleksandra Paklos jako další kandidátka v pořadí podle výsledků voleb. Změnu zaznamenává zápis ze setkání členů ČES 8. června 2019 při výjezdním zasedání v Ostravě.
-
-**Změna v revizní komisi v letech 2020–2021:** Jelena Lerchová odstoupila 16. prosince 2020. Na její místo byl kooptován náhradník Alexandr Čech. Zápis z 5. června 2021 již potvrzuje revizní komisi ve složení Martin Dančík, Aristotelis Jakovidis a Alexandr Čech.
+**Změna v revizní komisi v letech 2020–2021:** MUDr. Jelena Lerchová odstoupila 16. prosince 2020; nahradil ji Alexandr Čech. Zápis z 5. června 2021 již potvrzuje jeho členství v komisi. Přesné datum kooptace není doloženo.
 
 ### Páté období: od roku 2023
 
-| Orgán | Členové zvolení pro období |
+| Orgán | Členové a jejich funkce |
 |---|---|
-| Výbor | MDDr. Radovan Žižka, Ph.D.<br>MUDr. Martin Dančík<br>MDDr. Alexandr Čech<br>MDDr. Aristotelis Jakovidis<br>MUDr. Hana Zallmannová<br>MDDr. Gabriel Dékány a MUDr. Michal Bumbálek, Ph.D. |
-| Revizní komise | MDDr. Jan Lapiš<br>Dr. Aleksandra Paklos a MDDr. Vít Jiroušek. Předsedou je MDDr. Jan Lapiš. |
-
-Prezidentem se stal Radovan Žižka, vědeckým sekretářem Martin Dančík, hospodářem Alexandr Čech a prezidentem kongresu Aristotelis Jakovidis.
+| Výbor | MDDr. Radovan Žižka, Ph.D. – prezident společnosti<br>MUDr. Martin Dančík – vědecký sekretář<br>MDDr. Alexandr Čech – hospodář<br>MDDr. Aristotelis Jakovidis – prezident kongresu<br>MUDr. Hana Zallmannová – členka výboru<br>MDDr. Gabriel Dékány – člen výboru<br>MUDr. Michal Bumbálek, Ph.D. – člen výboru |
+| Revizní komise | MDDr. Jan Lapiš – předseda revizní komise<br>Dr. Aleksandra Paklos – členka revizní komise<br>MDDr. Vít Jiroušek – člen revizní komise |
 
 ### Občasník ČES a redakční rada
 
 Občasník ČES vychází od roku 2023. Přípravou čísla pro rok 2025 byl pověřen Antonín Tichý, který je současným šéfredaktorem.
 
 **Současná redakční rada:** MDDr. Antonín Tichý, Ph.D., MDDr. Radovan Žižka, Ph.D., MDDr. Jan Lapiš a MUDr. Martin Dančík.
-
-### Minulí funkcionáři a členové orgánů ČES
-
-Na přehled jednotlivých období navazuje souhrn zachovaný z původních stránek a doplněný podle dobových zápisů.
-
-| Funkce | Dřívější funkcionáři |
-|---|---|
-| Prezident | doc. MUDr. Luděk Peřinka, CSc. (2007–2015); MUDr. Daniel Černý, Ph.D. (2015–2023) |
-| Vědecký sekretář | doc. MUDr. Lenka Roubalíková, Ph.D. (2007–2013); MUDr. Martin Dančík (2013–2019); MDDr. Radovan Žižka, Ph.D. (2019–2023) |
-| Hospodář | MUDr. Jan Netolický, Ph.D. (2007–2015); MUDr. Jan Baštecký (2015–2019); MUDr. Simona Ságlová, Ph.D. (2019–2023) |
-| Prezident kongresu | MUDr. Simona Ságlová, Ph.D. (2009–2015); MUDr. Soňa Hűttnerová (2015–2023) |
-
-**Další bývalí členové výboru a revizní komise:** MUDr. Štěpán Gála, MUDr. Lenka Hofreiterová, MUDr. Tomáš Horák, MUDr. Jelena Lerchová, MUDr. Filip Světlík, MUDr. Jan Šváb a Eva Záhlavová. Osoby, které dále působí v orgánech společnosti, jsou uvedeny v přehledech příslušných období výše.
 
 ČES děkuje všem, kteří se v jednotlivých obdobích podíleli na vedení společnosti, práci revizní komise, přípravě kongresů a dalších vzdělávacích akcí nebo vydávání časopisu. Jejich práce je součástí společné historie české endodoncie.
