@@ -26,6 +26,10 @@ jobs:
           php -d zend.assertions=1 -d assert.exception=1 tests/obtiznost.test.php
       - name: Install PDF library
         run: composer install --no-dev --prefer-dist --no-interaction --no-progress --optimize-autoloader
+      - name: Smoke test JavaScript and PDF export
+        run: |
+          node --check assessment.js
+          php -d zend.assertions=1 -d assert.exception=1 tests/obtiznost-pdf.test.php
       - name: Build production pages
         run: python3 build.py --production
       - name: Validate output
