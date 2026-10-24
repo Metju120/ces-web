@@ -25,8 +25,8 @@ Nasazení na Český hosting, ověření skutečného doručení přihlášek, k
 
 - Jediný redakční zdroj pro web, Občasník ČES a LKS: `content/historie-clanek.md`.
 - `python build.py` generuje z článku stránku `historie.html`; `python build.py --production` ji vloží do `release/`.
-- Osm upravených historických fotografií je uloženo **přímo v repozitáři** ve složce `assets/historie/`. Pět je již vloženo do stránky (3., 4., 6. a 9. kongres a workshop Říčany 2018).
-- Fotografie jsou od uživatele, názvy kongresů jsou odvozeny z názvů dodaných souborů. Přesný popis osob není do popisků doplňován z neověřených odhadů.
+- Osm upravených historických fotografií je uloženo **přímo v repozitáři** ve složce `assets/historie/`. Pět je již vloženo do stránky (dvě z 3. kongresu, po jedné z 6. a 9. kongresu a workshop Říčany 2018).
+- Fotografie jsou od uživatele, názvy kongresů vycházejí z dodaných souborů; u fotografie dvou sedících účastníků uživatel opravil původní označení na 3. kongres. Přesný popis osob není do popisků doplňován z neověřených odhadů.
 - Zbývají tři zástupné obrazové pozice: detail Ceny Luďka Peřinky (2018), její předání (2018) a aktuální kongres.
 - V článku se fotografie vkládají syntaxí `[[OBRAZEK: assets/historie/fotografie.webp | Popis snímku | Popisek]]`; není-li soubor dostupný, generátor zobrazí bezpečný zástupný rámeček. Neověřené snímky se nepoužijí jako ilustrace jiné události.
 - Čestné členství doc. MUDr. Lenky Roubalíkové, Ph.D., je uvedeno od roku 2014 na základě doložení v e-mailové komunikaci ČES.
