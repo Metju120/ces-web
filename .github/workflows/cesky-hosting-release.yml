@@ -32,6 +32,13 @@ jobs:
           assert '24–25 September 2027' in english
           assert '17.–18. září 2027' not in congress
           assert '<meta name="robots" content="index,follow">' in index
+          assert '<link rel="canonical" href="https://www.endodont.cz/">' in index
+          assert 'https://www.endodont.cz/' in (root / 'sitemap.xml').read_text(encoding='utf-8')
+          redirects = (root / '.htaccess').read_text(encoding='utf-8')
+          assert 'RewriteCond %{HTTP_HOST} ^endodont\\.cz$ [NC,OR]' in redirects
+          assert 'https://www.endodont.cz%{REQUEST_URI}' in redirects
+          assert 'https://endodont.cz%{REQUEST_URI}' not in redirects
+
           print('Validated', sum(1 for _ in root.rglob('*') if _.is_file()), 'production files')
           PYCHK
       - name: Package webroot including dotfiles
