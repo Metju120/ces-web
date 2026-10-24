@@ -5,15 +5,23 @@
 
 Nová společnost navázala také na předchozí práci endodontické odborné skupiny při České stomatologické společnosti ČLS JEP. K jejich spojení došlo na plenárním zasedání 10. října 2007. Čestné členství tehdy přijaly prof. MUDr. Martina Kukletová, CSc., a doc. MUDr. Eva Záhlavová, CSc., jako ocenění své dlouholeté práce pro českou endodoncii.
 
+V roce 2014 se čestnou členkou ČES stala také doc. MUDr. Lenka Roubalíková, Ph.D., někdejší vědecká sekretářka společnosti.
+
 ### Setkávání, vzdělávání a první kongres
 
 Základem spolkového života byla osobní setkání a otevřená diskuse o klinických případech. První členský workshop se uskutečnil 23. února 2008 v hotelu Pavilon v Říčanech u Prahy. Sešlo se na něm čtrnáct členů a osm z nich představilo své klinické případy. Na červnové setkání téhož roku přijelo šestnáct členů; hlavním tématem bylo postendodontické ošetření. Tato setkání položila základ pravidelným členským workshopům. Prostor zde měly úspěšné léčebné postupy i rozbory neúspěchů, ze kterých se mohli ostatní poučit. V březnu 2008 se ČES stala řádným členem Evropské endodontické společnosti ESE. Již v září téhož roku se v Praze pod její záštitou a ve spolupráci s Českou stomatologickou komorou uskutečnilo setkání představitelů evropských endodontických společností.
 
-[[FOTO: První workshopy ČES | Archivní fotografie z členských setkání v hotelu Pavilon v Říčanech (2008).]]
+[[FOTO: 3. kongres ČES | Společná fotografie účastníků 3. kongresu ČES (2011); dodaný snímek „3. kongres 1.jpg“.]]
 
 ### Kongresy a osobnosti světové endodoncie
 
 První kongres České endodontické společnosti se uskutečnil 3. října 2009 v pražském hotelu Pyramida. Přilákal 270 účastníků a založil tradici každoročních odborných kongresů. Pyramida zůstala s kongresem spojená po řadu let. Pozdější ročníky se konaly také v Cubex Centru Praha a hotelu International; od roku 2024 hostí kongres O₂ universum. Ani pandemie tradici nepřerušila: dvanáctý ročník v roce 2020 proběhl online.
+
+[[FOTO: 4. kongres ČES | Pohled na odborný program při 4. kongresu ČES (2012); dodaný snímek „4. kongres 1.jpg“.]]
+
+[[FOTO: 6. kongres ČES | Setkání účastníků při 6. kongresu ČES (2014); dodaný snímek „6. kongres 2.jpg“.]]
+
+[[FOTO: 9. kongres ČES | Společná fotografie účastníků 9. kongresu ČES (2017); dodaný snímek „9. kongres.jpg“.]]
 
 K výrazným okamžikům patřil desátý kongres, který se konal 21. a 22. září 2018. Páteční přednášku Mahmouda Torabinejada v Obecním domě připravila ČES ve spolupráci s Pražskými dentálními dny. Sobotní program pokračoval v hotelu Pyramida. Při slavnostním setkání byl oceněn Luděk Peřinka za přínos české endodoncii a vznikla Cena Luďka Peřinky, určená k ocenění mimořádných zásluh o obor.
 
@@ -30,6 +38,8 @@ Od roku 2024 doplňují kongresový program praktické workshopy, při nichž si
 Činnost společnosti se postupně rozšířila o veřejné přednášky, praktické kurzy a odborná doporučení pro každodenní klinickou práci. Vedle výročního kongresu tak vznikl vzdělávací program rozložený do celého roku. Důležitou součástí zůstala členská výjezdní setkání, sdílení zkušeností a spolupráce se Slovenskou endodontickou spoločnosťou.
 
 Samostatné vzdělávací akce rozšířily prostor pro témata, která si zaslouží celý přednáškový den nebo praktický kurz. V roce 2024 tak ČES spolupořádala Den s regenerativní endodoncií s G. T.-J. Huangem a připravila přednáškový den Hubertuse van Waese s přesahem do dětského zubního lékařství. V roce 2025 následovala mikrochirurgická endodoncie s Paulou Villou, doplněná dvoudenním praktickým workshopem.
+
+[[FOTO: Workshop ČES v Říčanech | Členský workshop v Říčanech (2018); dodaný snímek „workshop Říčany 2018.jpg“.]]
 
 ### Časopis, mezinárodní spolupráce a podpora vzdělávání
 
