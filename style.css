@@ -80,3 +80,30 @@ h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing
 .history-photo img{display:block;width:100%;height:auto;border-radius:12px}
 .history-photo figcaption{padding-top:.65rem;font-size:.85rem;color:#607187;line-height:1.5}
 @media print{.history-photo{break-inside:avoid}.history-photo img{max-height:120mm;object-fit:contain}}
+
+/* Approved navigation A: white brand row, dedicated blue menu band. */
+.header-shell{background:#fff;border-bottom:0}
+.header-shell .header{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:18px;padding:18px 0;align-items:center}
+.header-shell .brand-lockup{grid-column:1;grid-row:1;max-width:340px}
+.header-shell .header-social{grid-column:2;grid-row:1;display:flex;align-items:center;justify-self:end;gap:18px}
+.language-link{border-left:1px solid #c9dceb;padding:8px 0 8px 18px;text-decoration:none;font-weight:700;color:#24476b}
+.navigation-band{background:#416d9f}
+.navigation-band .nav{display:flex;position:static;justify-content:flex-start;align-items:stretch;gap:0;padding:0;box-shadow:none;font-size:17px;white-space:normal}
+.navigation-band .nav a{position:relative;display:flex;align-items:center;justify-content:center;flex:1;padding:18px 28px;color:#fff;text-decoration:none;font-weight:700;border-right:1px solid #ffffff50;border-radius:0;background:transparent}
+.navigation-band .nav a:first-child{border-left:1px solid #ffffff50}
+.navigation-band .nav a:hover,.navigation-band .nav a[aria-current="page"]{background:#365f8d;color:white}
+.navigation-band .nav a[aria-current="page"]:after{content:'';position:absolute;bottom:5px;left:22px;right:22px;height:3px;background:#fff}
+.header-shell .menu-button{display:none}
+.navigation-band a:focus-visible,.language-link:focus-visible{outline:3px solid #163754;outline-offset:-4px}
+.history-photo-congress-2026{overflow:hidden;display:flex;flex-direction:column}
+.history-photo-congress-2026 img{aspect-ratio:1600/450;object-fit:cover;object-position:center 55.375%;border-radius:12px}
+@media(max-width:850px){
+ .header-shell .header{grid-template-columns:minmax(0,1fr) auto;gap:12px}
+ .header-shell .brand-lockup{max-width:290px}
+ .header-shell .header-social{gap:10px}
+ .header-shell .menu-button{display:block;grid-column:1/-1;grid-row:2;justify-self:stretch;background:#416d9f;border:0;color:#fff;font-size:17px;font-weight:700;padding:12px}
+ .navigation-band .nav{display:none;width:100%;max-width:none}
+ .navigation-band .nav.open{display:flex;flex-direction:column}
+ .navigation-band .nav a{flex:auto;border:0;border-bottom:1px solid #ffffff50;padding:16px 24px;justify-content:flex-start}
+}
+@media(max-width:480px){.header-shell .header-social{gap:7px}.header-social .social-link{width:25px;height:30px;flex-basis:25px}.header-social .social-links{gap:3px}.language-link{padding-left:9px;font-size:13px}.header-shell .brand-lockup{gap:5px}}

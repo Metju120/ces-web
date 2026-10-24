@@ -22,3 +22,6 @@ Všechny fotografie jsou v `assets/historie/`. Čísla kongresů vycházejí z p
 - `10-kongres-2018-cena-ludka-perinky.webp`: příloha `06.JPG`, detail ceny s rokem 2018.
 - `10-kongres-2018-predani-ceny-ludka-perinky.webp`: příloha `05.JPG`, slavnostní ocenění na 10. kongresu 2018.
 Obě fotografie jsou vložené; starší poznámka o jejich chybění již neplatí.
+
+
+18. kongres 2026: `18-kongres-2026-clenove-ces.jpg`, dodal Martin, společná fotografie členů ČES. Originál zachován; webový ořez odstraňuje strop a podlahu, zachovává všechny postavy.

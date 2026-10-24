@@ -53,7 +53,7 @@ Společnost během své historie vedli tři prezidenti: Luděk Peřinka v letech
 
 Podle dochované členské databáze evidovala ČES v roce 2007 celkem 15 členů včetně dvou čestných a v roce 2012 již 32 členů včetně dvou čestných. Podle ročních hlášení ESE měla společnost 54 členů v roce 2016, 67 v roce 2023 a 86 v roce 2026.
 
-[[FOTO: Kongres ČES dnes | Fotografie z výročního kongresu ČES v O₂ universu.]]
+[[OBRAZEK: assets/historie/18-kongres-2026-clenove-ces.jpg | Společná fotografie členů ČES na 18. kongresu v roce 2026 | Členové ČES na 18. výročním kongresu v O₂ universu (2026).]]
 
 ### Dvacet let ČES
 

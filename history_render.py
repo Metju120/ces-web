@@ -42,7 +42,7 @@ def render_history_article(source):
             if len(parts) == 3 and parts[0].startswith("assets/") and ".." not in parts[0]:
                 path, alt, caption = parts
                 if (Path(__file__).resolve().parent / path).is_file():
-                    out.append('<figure class="history-photo"><img src="' + html.escape(path, quote=True)
+                    out.append('<figure class="history-photo' + (' history-photo-congress-2026' if path.endswith('18-kongres-2026-clenove-ces.jpg') else '') + '"><img src="' + html.escape(path, quote=True)
                                + '" alt="' + html.escape(alt, quote=True)
                                + '" loading="lazy" decoding="async"><figcaption>'
                                + html.escape(caption) + '</figcaption></figure>')
