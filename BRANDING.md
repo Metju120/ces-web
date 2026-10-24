@@ -32,3 +32,6 @@ Tato podoba je dočasným logem pro výroční rok; trvalé logo neměníme. Vel
 Po úpravě stylů změnit verzi odkazu na stylesheet, aby návštěvník nezůstal u staré podoby z mezipaměti.
 
 Schválené zjednodušení: žádný horní výroční pás, žádný drobný výroční popisek pod úvodem ani opakovaný slogan na kongresové kartě. Sociální ikony jsou přímo v bílé hlavičce, vpravo nad navigací. Výroční grafika zůstává jen v dočasném logu a v hlavním úvodu.
+
+## Homepage 1B — approved 2026-10-24
+Light editorial layout: serif headlines, logo blues, white header, ice-blue hero with exact 1B.2 emblem. Two overlapping event cards in approximately 2:1 ratio: Camilleri on sale first, congress second (registration pending). Compact upcoming meetings, three resource links, split membership section and light footer. No anniversary in footer. Previous main preserved as `backup/pred-navrhem-1b-2026-10-24` at `5cd947103f8d3643a3df86ac987e6708e53e997c`.
