@@ -17,11 +17,11 @@ Základem spolkového života byla osobní setkání a otevřená diskuse o klin
 
 První kongres České endodontické společnosti se uskutečnil 3. října 2009 v pražském hotelu Pyramida. Přilákal 270 účastníků a založil tradici každoročních odborných kongresů. Pyramida zůstala s kongresem spojená po řadu let. Pozdější ročníky se konaly také v Cubex Centru Praha a hotelu International; od roku 2024 hostí kongres O₂ universum. Ani pandemie tradici nepřerušila: dvanáctý ročník v roce 2020 proběhl online.
 
-[[OBRAZEK: assets/historie/04-kongres-ces-panel.webp | Diskuse na pódiu 4. kongresu ČES v roce 2012 | 4. kongres ČES (2012) – odborný program.]]
+[[OBRAZEK: assets/historie/03-kongres-ces-panel.webp | Dva účastníci odborné diskuse u stolu na 3. kongresu ČES | 3. kongres ČES (2011) – odborná diskuse.]]
 
 [[OBRAZEK: assets/historie/06-kongres-ces-slavnostni-okamzik.webp | Dva účastníci při slavnostním okamžiku 6. kongresu ČES v roce 2014 | 6. kongres ČES (2014) – setkání kolegů.]]
 
-[[OBRAZEK: assets/historie/09-kongres-ces-spolecne-foto.webp | Skupinová fotografie účastníků 9. kongresu ČES v roce 2017 | 9. kongres ČES (2017) – společná fotografie účastníků.]]
+[[OBRAZEK: assets/historie/09-kongres-ces-spolecne-foto-upravene.webp | Skupinová fotografie účastníků 9. kongresu ČES v roce 2017 | 9. kongres ČES (2017) – společná fotografie účastníků.]]
 
 K výrazným okamžikům patřil desátý kongres, který se konal 21. a 22. září 2018. Páteční přednášku Mahmouda Torabinejada v Obecním domě připravila ČES ve spolupráci s Pražskými dentálními dny. Sobotní program pokračoval v hotelu Pyramida. Při slavnostním setkání byl oceněn Luděk Peřinka za přínos české endodoncii a vznikla Cena Luďka Peřinky, určená k ocenění mimořádných zásluh o obor.
 
