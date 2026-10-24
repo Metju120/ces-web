@@ -23,8 +23,13 @@ Nasazení na Český hosting, ověření skutečného doručení přihlášek, k
 
 ## Historie ČES — článek k 20. výročí
 
-- Jediný redakční zdroj pro web i pro Občasník ČES a LKS: `content/historie-clanek.md`.
-- `python build.py` generuje z článku stránku `historie.html`; při nasazení `python build.py --production` vzniká soubor v `release/`.
-- Zástupné fotografie mají tvar `[[FOTO: téma | pracovní popisek]]`. Před zveřejněním nahraďte ověřenými fotografiemi v `assets/historie/` a zápisem `[[OBRAZEK: assets/historie/fotografie.webp | Popis snímku | Popisek s případným uvedením autora]]`.
-- Připravené pozice: první workshopy (2008), detail Ceny Luďka Peřinky (2018), její slavnostní předání (2018), současný výroční kongres.
-- Historická fotografie a přednášející musí být ověřeni před ostrým publikováním; stránka na GitHub Pages zůstává neindexovaným náhledem.
+- Jediný redakční zdroj pro web, Občasník ČES a LKS: `content/historie-clanek.md`.
+- `python build.py` generuje z článku stránku `historie.html`; `python build.py --production` ji vloží do `release/`.
+- Osm upravených historických fotografií je uloženo **přímo v repozitáři** ve složce `assets/historie/`. Pět je již vloženo do stránky (3., 4., 6. a 9. kongres a workshop Říčany 2018).
+- Fotografie jsou od uživatele, názvy kongresů jsou odvozeny z názvů dodaných souborů. Přesný popis osob není do popisků doplňován z neověřených odhadů.
+- Zbývají tři zástupné obrazové pozice: detail Ceny Luďka Peřinky (2018), její předání (2018) a aktuální kongres.
+- V článku se fotografie vkládají syntaxí `[[OBRAZEK: assets/historie/fotografie.webp | Popis snímku | Popisek]]`; není-li soubor dostupný, generátor zobrazí bezpečný zástupný rámeček. Neověřené snímky se nepoužijí jako ilustrace jiné události.
+- Čestné členství doc. MUDr. Lenky Roubalíkové, Ph.D., je uvedeno od roku 2014 na základě doložení v e-mailové komunikaci ČES.
+- Stránka na GitHub Pages je neindexovaný pracovní náhled. Před ostrým publikováním ověřte redakční znění a oprávnění k fotografiím.
+
+Podrobné názvy obrázků a vazbu na zdrojové fotografie uvádí `content/historie-fotografie.md`.
