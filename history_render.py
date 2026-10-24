@@ -5,6 +5,7 @@ Markdown package is needed by the static build.
 """
 import html
 import re
+from pathlib import Path
 
 def inline(text):
     text = html.escape(text.strip(), quote=True).replace("&lt;br&gt;", "<br>")
@@ -40,10 +41,17 @@ def render_history_article(source):
             parts = [part.strip() for part in first[10:-2].split("|", 2)]
             if len(parts) == 3 and parts[0].startswith("assets/") and ".." not in parts[0]:
                 path, alt, caption = parts
-                out.append('<figure class="history-photo"><img src="' + html.escape(path, quote=True)
-                           + '" alt="' + html.escape(alt, quote=True)
-                           + '" loading="lazy" decoding="async"><figcaption>'
-                           + html.escape(caption) + '</figcaption></figure>')
+                if (Path(__file__).resolve().parent / path).is_file():
+                    out.append('<figure class="history-photo"><img src="' + html.escape(path, quote=True)
+                               + '" alt="' + html.escape(alt, quote=True)
+                               + '" loading="lazy" decoding="async"><figcaption>'
+                               + html.escape(caption) + '</figcaption></figure>')
+                else:
+                    out.append('<figure class="history-photo-placeholder">'
+                               '<div class="history-photo-box" aria-hidden="true">'
+                               '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 14h10l4-5h12l4 5h8v25H5z"/><circle cx="24" cy="26" r="8"/></svg>'
+                               '<span>Archivní fotografie připravena k doplnění</span></div>'
+                               '<figcaption>' + html.escape(caption) + '</figcaption></figure>')
         elif first.startswith("|"):
             rows = []
             for line in lines:
