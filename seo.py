@@ -43,7 +43,7 @@ def finish_seo(out,production):
  (out/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+html.escape(u)+'</loc></url>' for u in urls)+'</urlset>')
  (out/'robots.txt').write_text('User-agent: *\nDisallow:\n'+('Sitemap: '+BASE+'sitemap.xml\n' if production else '# Preview uses page-level noindex; crawling must remain allowed.\n'))
  if production:
-   rules=['RewriteEngine On','RewriteCond %{HTTP_HOST} ^endodont\\.cz$ [NC,OR]','RewriteCond %{HTTPS} !=on','RewriteRule ^ https://www.endodont.cz%{REQUEST_URI} [R=301,L,NE]','RewriteRule ^index\\.html$ https://www.endodont.cz/ [R=301,L]']
+  rules=['RewriteEngine On','RewriteCond %{HTTP_HOST} ^endodont\\.cz$ [NC,OR]','RewriteCond %{HTTPS} !=on','RewriteRule ^ https://www.endodont.cz%{REQUEST_URI} [R=301,L,NE]','RewriteRule ^index\\.html$ https://www.endodont.cz/ [R=301,L]']
   redirects={**REDIRECTS,**json.loads((Path(__file__).parent/'content/redirects-archiv.json').read_text())}
   rules += ['RewriteRule ^'+re.escape(old)+'/?$ /'+new+' [R=301,L]' for old,new in redirects.items()]
   for pdf in (Path(__file__).parent/'dokumenty').glob('data-blob-*.pdf'):
