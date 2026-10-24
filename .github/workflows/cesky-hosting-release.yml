@@ -1,0 +1,44 @@
+name: Build production package for Cesky hosting
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build production pages
+        run: python3 build.py --production
+      - name: Validate output
+        run: |
+          python3 - <<'PYCHK'
+          from pathlib import Path
+          root = Path('release')
+          files = ['index.html', 'kongres.html', 'kalendar.html', 'vzdelavani.html', 'english.html', 'prihlaska.html', 'api/clenstvi.php', '.htaccess', 'sitemap.xml', 'robots.txt']
+          missing = [name for name in files if not (root / name).is_file()]
+          if missing:
+              raise SystemExit('Missing production files: ' + ', '.join(missing))
+          index = (root / 'index.html').read_text(encoding='utf-8')
+          congress = (root / 'kongres.html').read_text(encoding='utf-8')
+          english = (root / 'english.html').read_text(encoding='utf-8')
+          assert '24.–25. září 2027' in index
+          assert '20270924' in congress and '20270926' in congress
+          assert '24–25 September 2027' in english
+          assert '17.–18. září 2027' not in congress
+          assert '<meta name="robots" content="index,follow">' in index
+          print('Validated', sum(1 for _ in root.rglob('*') if _.is_file()), 'production files')
+          PYCHK
+      - name: Package webroot including dotfiles
+        run: cd release && zip -r -q ../ces-endodont-production.zip .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ces-endodont-production
+          path: ces-endodont-production.zip
+          if-no-files-found: error
+          retention-days: 30
