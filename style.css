@@ -75,3 +75,8 @@ h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing
  .history-photo-box{background:#f7f7f7!important;border:1px dashed #aaa}
  .history-photo-placeholder{max-width:100%;break-inside:avoid}
 }
+
+.history-photo{max-width:760px;margin:2rem auto 2.2rem}
+.history-photo img{display:block;width:100%;height:auto;border-radius:12px}
+.history-photo figcaption{padding-top:.65rem;font-size:.85rem;color:#607187;line-height:1.5}
+@media print{.history-photo{break-inside:avoid}.history-photo img{max-height:120mm;object-fit:contain}}
