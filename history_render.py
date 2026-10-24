@@ -36,6 +36,14 @@ def render_history_article(source):
                        '<span>Fotografie k doplnění</span></div><figcaption><strong>'
                        + html.escape(label) + '</strong> – ' + html.escape(caption)
                        + '</figcaption></figure>')
+        elif first.startswith("[[OBRAZEK:") and first.endswith("]]"):
+            parts = [part.strip() for part in first[10:-2].split("|", 2)]
+            if len(parts) == 3 and parts[0].startswith("assets/") and ".." not in parts[0]:
+                path, alt, caption = parts
+                out.append('<figure class="history-photo"><img src="' + html.escape(path, quote=True)
+                           + '" alt="' + html.escape(alt, quote=True)
+                           + '" loading="lazy" decoding="async"><figcaption>'
+                           + html.escape(caption) + '</figcaption></figure>')
         elif first.startswith("|"):
             rows = []
             for line in lines:
