@@ -21,6 +21,8 @@ PAGES={
 'kontakt.html':('Kontakt a sekretariát ČES','Kontaktní údaje České endodontické společnosti. Sekretariát pro dotazy k členství, odborným akcím a činnosti společnosti.'),
 'materialy.html':('Endodoncie – odborné materiály a doporučení ČES','Archiv odborných dokumentů ČES ke stažení: příprava zubu, výplachový protokol a hodnocení endodontické léčby. U dokumentů zohledněte rok vydání.'),
 'ochrana-udaju.html':('Ochrana osobních údajů ČES','Informace o zpracování osobních údajů při podání přihlášky do České endodontické společnosti a kontakt na správce údajů.'),
+'obchodni-podminky.html':('Obchodní podmínky a reklamační řád ČES','Obchodní podmínky vzdělávacích akcí České endodontické společnosti, verze 1.1 účinná od 12. 6. 2026. Objednávky, platby, storno a reklamace.'),
+'podminky-ochrany-osobnich-udaju.html':('Podmínky ochrany a zpracování osobních údajů ČES','Ochrana a zpracování osobních údajů při registraci na vzdělávací akce ČES. Informace o správci, účelech, uchovávání údajů a právech účastníků.'),
 'english.html':('Czech Endodontic Society – education and congress','The Czech Endodontic Society: professional education and collaboration. The 19th Annual Congress takes place on 24–25 September 2027.'),
 'obcasnik.html':('Občasník ČES – časopis a archiv 2023–2026','Čtěte Občasník České endodontické společnosti. Aktuální vydání 2026 a archiv ročníků 2023–2025 přímo online nebo jako PDF ke stažení.')}
 ORG={'@type':'Organization','@id':BASE+'#organization','name':'Česká endodontická společnost','alternateName':'Czech Endodontic Society','url':BASE,'logo':BASE+'assets/logo-ces.webp','sameAs':['https://www.facebook.com/endodoncie/','https://www.instagram.com/endodont_cz/','https://x.com/endodont_cz']}

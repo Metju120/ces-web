@@ -20,7 +20,7 @@ jobs:
           python3 - <<'PYCHK'
           from pathlib import Path
           root = Path('release')
-          files = ['index.html', 'kongres.html', 'kalendar.html', 'vzdelavani.html', 'english.html', 'prihlaska.html', 'api/clenstvi.php', '.htaccess', 'sitemap.xml', 'robots.txt']
+          files = ['index.html', 'kongres.html', 'kalendar.html', 'vzdelavani.html', 'english.html', 'prihlaska.html', 'obchodni-podminky.html', 'podminky-ochrany-osobnich-udaju.html', 'api/clenstvi.php', '.htaccess', 'sitemap.xml', 'robots.txt']
           missing = [name for name in files if not (root / name).is_file()]
           if missing:
               raise SystemExit('Missing production files: ' + ', '.join(missing))
@@ -29,6 +29,15 @@ jobs:
           english = (root / 'english.html').read_text(encoding='utf-8')
           assert '24.–25. září 2027' in index
           assert '20270924' in congress and '20270926' in congress
+          camilleri = (root / 'camilleri.html').read_text(encoding='utf-8')
+          assert 'href="obchodni-podminky.html"' in camilleri
+          assert 'href="podminky-ochrany-osobnich-udaju.html"' in camilleri
+          assert 'kongres.endodont.cz/obchodni-podminky' not in camilleri
+          terms = (root / 'obchodni-podminky.html').read_text(encoding='utf-8')
+          privacy = (root / 'podminky-ochrany-osobnich-udaju.html').read_text(encoding='utf-8')
+          assert 'Verze 1.1' in terms and 'VIII. Řešení sporů' in terms
+          assert 'Verze 1.1' in privacy and 'V. Vaše práva' in privacy
+          assert 'href="obchodni-podminky.html"' in index
           assert '24–25 September 2027' in english
           assert '17.–18. září 2027' not in congress
           assert '<meta name="robots" content="index,follow">' in index
