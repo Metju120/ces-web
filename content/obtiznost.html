@@ -1,0 +1,26 @@
+<section class="wrap page-body assessment-page" id="assessment-root">
+<p class="assessment-intro">Orientační klasifikace obtížnosti endodontického případu podle původního formuláře ČES vycházejícího z metodiky Canadian Academy of Endodontics. Zvolte příslušné charakteristiky ve třech skupinách. U jedné otázky lze, stejně jako v původním formuláři, označit více odpovědí.</p>
+<p class="notice">Hodnocení je pomůckou pro odborné rozhodování, nenahrazuje klinické vyšetření ani individuální posouzení prognózy. Do formuláře nevkládejte osobní údaje pacienta. Přílohy posílejte jen po náležité anonymizaci a při splnění podmínek ochrany údajů.</p>
+<div class="assessment-toolbar"><div class="assessment-result" aria-live="polite"><span>Celkem bodů</span><strong id="assessment-points">0</strong><span id="assessment-class">Zatím nevyhodnoceno</span><small id="assessment-status">Vyberte odpovědi.</small></div><button type="button" class="button secondary" id="assessment-print">Vytisknout / uložit jako PDF</button></div>
+<div id="assessment-questions" aria-live="off"><p>Načítám hodnoticí kritéria…</p></div>
+<div id="assessment-print-report" class="assessment-print-report" aria-hidden="true"></div>
+<form id="assessment-mail-form" enctype="multipart/form-data" autocomplete="on">
+<h2>Odeslání výsledků e-mailem</h2>
+<p>Po nasazení na Český hosting lze odeslat přehled výsledků jako PDF a připojit dva anonymizované dokumenty. V náhledu GitHub Pages funguje hodnocení a tisk.</p>
+<div class="form-grid">
+<label class="field">Jméno odesílatele *<input name="name" maxlength="120" required autocomplete="name"></label>
+<label class="field">E-mail odesílatele *<input name="sender" type="email" maxlength="254" required autocomplete="email"></label>
+<label class="field full">E-maily příjemců (oddělit mezerou nebo čárkou) *<input name="recipients" maxlength="750" required placeholder="kolega@example.cz"></label>
+<label class="field">Příloha 1 (PDF, JPG, PNG; max. 5 MB)<input name="file1" type="file" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png"></label>
+<label class="field">Příloha 2 (PDF, JPG, PNG; max. 5 MB)<input name="file2" type="file" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png"></label>
+<label class="field full">Poznámka<textarea name="note" maxlength="2000" rows="4"></textarea></label>
+</div>
+<div class="trap-field" aria-hidden="true"><label>Webová stránka<input name="website" tabindex="-1" autocomplete="off"></label></div>
+<label class="check"><input type="checkbox" name="consent" required><span>Potvrzuji, že mám oprávnění zaslat údaje uvedeným příjemcům a že přílohy neobsahují neanonymizované pacientské údaje. *</span></label>
+<p id="assessment-mail-status" role="status" class="muted">Ověřuji dostupnost bezpečného odesílání…</p>
+<button type="submit" id="assessment-send" class="button" disabled>Odeslat výsledky a přílohy</button>
+</form>
+<p class="muted"><small>Provozovatel: Česká endodontická společnost, z. s. · <a href="ochrana-udaju.html">Ochrana osobních údajů</a></small></p>
+</section>
+<link rel="stylesheet" href="assessment.css">
+<script src="assessment.js" defer></script>

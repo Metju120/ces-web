@@ -1,0 +1,12 @@
+.assessment-page{max-width:1140px}.assessment-intro{max-width:850px;line-height:1.65}
+.assessment-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;padding:20px 0;border-bottom:1px solid #d8e2ed;margin-bottom:24px}
+.assessment-result{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.assessment-result strong{font-size:2rem;color:#205f9a}.assessment-result #assessment-class{font-weight:700}.assessment-result small{flex-basis:100%;color:#606e79}
+.assessment-group{border:1px solid #dbe4ec;border-radius:12px;margin:20px 0;padding:0 18px 14px;overflow:hidden}.assessment-group>h2{background:#eef5fa;margin:0 -18px 16px;padding:15px 18px;font-size:1.28rem}
+.assessment-question{border-bottom:1px solid #dfe7ee;padding:14px 0}.assessment-question:last-child{border:0}.assessment-question h3{font-size:1.08rem;margin:0 0 12px}
+.assessment-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.assessment-column{min-width:0;border-radius:8px;background:#f7f9fb;padding:12px}
+.assessment-column h4{font-size:.88rem;margin:0 0 10px;color:#205f9a}.assessment-option{display:flex;align-items:start;gap:9px;font-size:.91rem;line-height:1.45;margin:9px 0;cursor:pointer}.assessment-option input{margin-top:3px;accent-color:#2879bb;flex-shrink:0}
+.assessment-empty{color:#7a8892;font-size:.82rem}.assessment-mail-error{color:#a83232;font-weight:700}.assessment-mail-ok{color:#176633;font-weight:700}
+.assessment-print-report{display:none}.assessment-page .form-grid{margin:16px 0}.assessment-page #assessment-mail-form{margin-top:36px;padding-top:14px;border-top:2px solid #dbe4ec}
+@media(max-width:730px){.assessment-columns{grid-template-columns:1fr}.assessment-toolbar{align-items:stretch}.assessment-column{padding:10px}.assessment-page{padding-left:0;padding-right:0}}
+@media print{.header-shell,.site-footer,.assessment-intro,.assessment-toolbar>button,.assessment-page>.notice,#assessment-questions,#assessment-mail-form,.assessment-page>.muted,.page-intro .breadcrumb{display:none!important}
+.assessment-print-report{display:block!important;color:#111}.assessment-page{max-width:none;padding:0!important}.assessment-result{font-size:14pt}.assessment-print-report h2{margin:22px 0 8px;font-size:13pt}.assessment-print-report h3{margin:8px 0;font-size:11pt}.assessment-print-report li{margin-bottom:3px}.assessment-print-report section{break-inside:avoid}}
