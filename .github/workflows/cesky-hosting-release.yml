@@ -45,7 +45,10 @@ jobs:
           congress = (root / 'kongres.html').read_text(encoding='utf-8')
           english = (root / 'english.html').read_text(encoding='utf-8')
           assert '24.–25. září 2027' in index
-          assert 'href="obtiznost.html"' in index
+          assert 'href="obtiznost.html"' not in index
+          assert 'href="obtiznost.html"' in (root / 'pro-lekare.html').read_text(encoding='utf-8')
+          assert index.count('class="calendar-item"') == 4
+          assert 'Posouváme českou endodoncii.' in index
           assert 'assets/assessment/questions.json' in (root / 'assessment.js').read_text(encoding='utf-8')
           assert 'Odeslání výsledků e-mailem' in (root / 'obtiznost.html').read_text(encoding='utf-8')
           assert '20270924' in congress and '20270926' in congress
