@@ -1,5 +1,7 @@
 # Web České endodontické společnosti
 
+**Oficiální název spolku:** **Česká endodontická společnost z. s.** (bez čárky před „z. s.“). Stejný zápis používat na všech stránkách, v elektronických formulářích a v dokumentaci. Jiné skloňované podoby názvu zachovávají rovněž zápis právní formy bez čárky.
+
 Výroční web ČES, bílé/modré/stříbrné provedení a schválený motiv 1B.2. GitHub Pages: https://metju120.github.io/ces-web/
 
 ## Sestavení

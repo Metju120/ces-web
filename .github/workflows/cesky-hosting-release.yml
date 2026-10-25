@@ -62,6 +62,10 @@ jobs:
           assert 'Verze 1.1' in privacy and 'V. Vaše práva' in privacy
           assert 'href="obchodni-podminky.html"' in index
           assert '24–25 September 2027' in english
+          assert 'Česká endodontická společnost z. s.' in (root / 'kontakt.html').read_text(encoding='utf-8')
+          for page in root.glob('*.html'):
+              html = page.read_text(encoding='utf-8')
+              assert 'Česká endodontická společnost, z. s.' not in html, f'Incorrect legal name in {page.name}'
           assert '17.–18. září 2027' not in congress
           assert '<meta name="robots" content="index,follow">' in index
           assert '<link rel="canonical" href="https://www.endodont.cz/">' in index
