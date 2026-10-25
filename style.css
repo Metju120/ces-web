@@ -137,3 +137,13 @@ h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing
 @media(max-width:1000px){.home-calendar .calendar-columns{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.home-calendar .calendar-heading{font-size:29px}.home-calendar .calendar-columns{grid-template-columns:1fr}.home-calendar .calendar-item{display:grid;grid-template-columns:95px 1fr auto;gap:16px;padding:18px}.home-calendar .calendar-item time strong{font-size:29px}.home-calendar .calendar-item p{margin-top:8px}.history-photo{width:43%;margin-left:16px}.statutes-toc{padding:20px}.resource-shortcuts{grid-template-columns:1fr}}
 @media print{.history-photo{float:right;width:32%;margin:0 0 12pt 14pt}.history-image-link{display:block}.photo-dialog{display:none}}
+
+/* Stable identity and membership benefits */
+.header-shell .brand-lockup{display:block;max-width:310px}.header-shell .brand-lockup .ces-logo{width:100%;max-width:310px;height:auto}
+.membership-invitation{padding-top:42px;padding-bottom:42px}.membership-invitation>h2{font-size:clamp(28px,3vw,40px);max-width:24ch;margin-bottom:18px}.membership-invitation>.lead{max-width:76ch}
+.membership-pillars{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;margin:28px 0}.membership-pillars article{border-top:3px solid #6898ce;padding:18px 0}.membership-pillars h3{font-size:21px;color:#24476b;margin-bottom:12px}.membership-pillars p{font-size:15px;line-height:1.65}
+.board-portrait{width:150px;height:150px;object-fit:contain;border-radius:50%;display:block;margin:0 0 20px}
+.resource-shortcuts{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1000px){.membership-pillars{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.membership-pillars{grid-template-columns:1fr 1fr}.resource-shortcuts{grid-template-columns:1fr}.header-shell .brand-lockup .ces-logo{max-width:240px}.membership-pillars article{padding-top:12px}.board-portrait{width:130px;height:130px}}
+@media(max-width:400px){.membership-pillars{grid-template-columns:1fr}}

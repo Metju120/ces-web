@@ -40,7 +40,7 @@ def metadata(page,title,desc,production):
  return title,desc,extra
 # Only corresponding pages are redirected. Past event details must not become the 2027 congress.
 REDIRECTS={
-'o-ces':'o-ces.html','o-ces/vykonny-vybor':'vybor.html','o-ces/historie-ces':'historie.html','o-ces/stanovy-ces':'stanovy.html','o-ces/prihlaska':'prihlaska.html','o-ces/kontakt':'kontakt.html','grant-ces':'grant.html','ese':'ese-ifea.html','english-information':'english.html','zpracovani-osobnich-udaju':'ochrana-udaju.html','prednasky':'vzdelavani.html','akce':'kalendar.html','pro-lekare':'vzdelavani.html','pro-lekare/ke-stazeni':'materialy.html','ke-stazeni':'materialy.html','pro-lekare/odkazy':'vzdelavani.html','prednasky/od-mta-k-biokeramickym-sealerum':'camilleri.html'}
+'o-ces':'o-ces.html','o-ces/vykonny-vybor':'vybor.html','o-ces/historie-ces':'historie.html','o-ces/stanovy-ces':'stanovy.html','o-ces/prihlaska':'prihlaska.html','o-ces/kontakt':'kontakt.html','grant-ces':'grant.html','ese':'ese-ifea.html','english-information':'english.html','zpracovani-osobnich-udaju':'ochrana-udaju.html','prednasky':'vzdelavani.html','akce':'kalendar.html','pro-lekare':'pro-lekare.html','pro-lekare/ke-stazeni':'materialy.html','ke-stazeni':'materialy.html','pro-lekare/odkazy':'vzdelavani.html','prednasky/od-mta-k-biokeramickym-sealerum':'camilleri.html'}
 def finish_seo(out,production):
  urls=[BASE+('' if p.name=='index.html' else p.name) for p in sorted(out.glob('*.html'))]
  (out/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+html.escape(u)+'</loc></url>' for u in urls)+'</urlset>')

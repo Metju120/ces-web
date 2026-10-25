@@ -1,0 +1,1 @@
+Portréty výboru a revizní komise převzaty z původních vložených obrázků v brožuře CES-brozura-160x160-18-vyrocni-kongres-2026-nahled2.pdf, strany 16–17. E-mail REKTIS 11. 9. 2026. Bez generativních úprav; pouze převod barevného prostoru pro PNG. Brožura slouží jako zdroj portrétů, nikoli jako aktuální zdroj termínu kongresu 2027.
