@@ -40,3 +40,16 @@ if(form){
 // Anonymous conversion hooks. A collector is intentionally not configured yet.
 function cesMetric(event,parameters={}){window.dispatchEvent(new CustomEvent('ces:metric',{detail:{event,...parameters}}))}
 document.addEventListener('click',event=>{const a=event.target.closest('a');if(!a)return;const url=new URL(a.href,location.href);if(url.hostname==='form.simpleshop.cz')cesMetric('registration_click',{event_id:'camilleri-2027'});else if(url.origin===location.origin&&url.pathname.endsWith('/prihlaska.html'))cesMetric('membership_form_open')});
+
+// Enlarge historical photographs; anchors remain usable without JavaScript.
+document.querySelectorAll('.history-image-link').forEach(link=>link.addEventListener('click',event=>{
+ if(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+ event.preventDefault();
+ const dialog=document.createElement('dialog');dialog.className='photo-dialog';
+ const close=document.createElement('button');close.type='button';close.className='photo-dialog-close';close.textContent='Zavřít ×';
+ const img=document.createElement('img');img.src=link.href;img.alt=link.querySelector('img').alt;
+ dialog.append(close,img);document.body.append(dialog);
+ close.addEventListener('click',()=>dialog.close());
+ dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
+ dialog.addEventListener('close',()=>{dialog.remove();link.focus()},{once:true});dialog.showModal();
+}));

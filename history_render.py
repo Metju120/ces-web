@@ -70,4 +70,5 @@ def render_history_article(source):
         else:
             out.append("<p>" + inline(" ".join(lines)) + "</p>")
     out.append("</div>")
-    return "\n".join(out)
+    rendered = "\n".join(out)
+    return re.sub(r'<img src="([^"]+)"([^>]*?)>', r'<a class="history-image-link" href="\1" target="_blank" rel="noopener" aria-label="Zvětšit fotografii"><img src="\1"\2></a>', rendered)
