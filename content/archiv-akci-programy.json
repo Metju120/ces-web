@@ -1,0 +1,743 @@
+{
+  "kongresy": [
+    {
+      "cislo": 1,
+      "rok": 2009,
+      "datum": "3. 10. 2009",
+      "misto": "Hotel Pyramida, Praha",
+      "nazev": "1. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "MUDr. Daniel Černý",
+          ""
+        ]
+      ],
+      "zdroje": []
+    },
+    {
+      "cislo": 2,
+      "rok": 2010,
+      "datum": "2. 10. 2010",
+      "misto": "Hotel Pyramida, Praha",
+      "nazev": "2. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "Dr. Jean-Philippe Mallet",
+          "Nikl-titan v endodoncii po 15 letech – nové přístupy při opracování a čištění kanálku"
+        ],
+        [
+          "Dr. John West",
+          "Souhrn zkušeností endodontisty"
+        ],
+        [
+          "MUDr. Maxim Stošek",
+          "Kde jsou limity endodontické léčby?"
+        ],
+        [
+          "MUDr. Jiří Marx",
+          "Kdo hledá… najde"
+        ],
+        [
+          "doc. MUDr. Luděk Peřinka, CSc.",
+          "Postendodontické ošetření – rychle se měnící téma"
+        ],
+        [
+          "MUDr. Filip Světlík",
+          "Endodoncie pod kamerou"
+        ]
+      ],
+      "zdroje": []
+    },
+    {
+      "cislo": 3,
+      "rok": 2011,
+      "datum": "1. 10. 2011",
+      "misto": "Praha",
+      "nazev": "3. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "MUDr. Daniel Černý",
+          ""
+        ],
+        [
+          "MUDr. Maxim Stošek",
+          ""
+        ],
+        [
+          "MUDr. Jiří Marx",
+          ""
+        ],
+        [
+          "doc. MUDr. Lenka Roubalíková, Ph.D.",
+          ""
+        ],
+        [
+          "doc. MUDr. Luděk Peřinka, CSc.",
+          ""
+        ],
+        [
+          "MUDr. Simona Ságlová, Ph.D.",
+          ""
+        ]
+      ],
+      "zdroje": []
+    },
+    {
+      "cislo": 4,
+      "rok": 2012,
+      "datum": "22. 9. 2012",
+      "misto": "Hotel Pyramida, Praha",
+      "nazev": "4. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "prof. Jean-Philippe Mallet",
+          "Jak se vypořádat se zalomeným nástrojem v kanálku"
+        ],
+        [
+          "MUDr. Katarína Cyprichová",
+          "Endodoncie dočasných zubů – jak na to v praxi"
+        ],
+        [
+          "MUDr. Petr Bednář, Ph.D.",
+          "Mortální metody exstirpace zubní dřeně a jejich „přínos“ pro moderní endodoncii"
+        ],
+        [
+          "MUDr. Jan Šváb",
+          "Endodontické kazuistiky z terénní praxe"
+        ],
+        [
+          "MUDr. Michal Alexejenko",
+          "Vytvoření správné přístupové kavity – základ dobrého výsledku endodontického ošetření"
+        ]
+      ],
+      "zdroje": []
+    },
+    {
+      "cislo": 5,
+      "rok": 2013,
+      "datum": "28. 9. 2013",
+      "misto": "Hotel Pyramida, Praha",
+      "nazev": "5. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "prof. Renato de Toledo Leonardo",
+          "Biologické koncepty v minimálně invazivní endodoncii"
+        ],
+        [
+          "MUDr. Katarína Cyprichová",
+          "Průvodce pulpotomií dočasného zubu"
+        ],
+        [
+          "Dr. Christoph Zirkel",
+          "Moderní endodoncie – přehled novinek"
+        ],
+        [
+          "MUDr. Martin Kapitán",
+          "Zodpovědnost endodontisty nekončí ošetřením kořenových kanálků"
+        ],
+        [
+          "MUDr. Jan Baštecký",
+          "Novinky z kongresu ESE v Lisabonu"
+        ]
+      ],
+      "zdroje": []
+    },
+    {
+      "cislo": 6,
+      "rok": 2014,
+      "datum": "27. 9. 2014",
+      "misto": "Hotel Pyramida, Praha",
+      "nazev": "6. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "Dr. Vladimir Ivanović, Ph.D.",
+          "Hlavní zásady a postupy strojového opracování kořenového kanálku nikltitanovými nástroji"
+        ],
+        [
+          "doc. MUDr. Luděk Peřinka, CSc.",
+          "Chemická válka v kořenovém kanálku"
+        ],
+        [
+          "MUDr. Hana Zallmannová",
+          "Reendodontické ošetření – novinky"
+        ],
+        [
+          "MUDr. Katarína Cyprichová",
+          "Pulpektomie dočasného zubu – iluze, nebo skutečnost?"
+        ],
+        [
+          "MUDr. Daniel Ott",
+          "Autotransplantace třetích molárů – endodontická výzva"
+        ],
+        [
+          "MUDr. Martin Pšeničný",
+          "Fraktura zubu – kazuistika"
+        ]
+      ],
+      "zdroje": []
+    },
+    {
+      "cislo": 7,
+      "rok": 2015,
+      "datum": "26. 9. 2015",
+      "misto": "Hotel Pyramida, Praha",
+      "nazev": "7. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "Dr. Domenico Ricucci",
+          "Endodontické infekce – lokalizace, morfologie a vliv na výsledek léčby"
+        ],
+        [
+          "doc. MUDr. Luděk Peřinka, CSc.",
+          ""
+        ],
+        [
+          "MUDr. Daniel Černý, Ph.D.",
+          ""
+        ],
+        [
+          "MUDr. Pavel Střihavka",
+          ""
+        ],
+        [
+          "MUDr. Karel Rada",
+          ""
+        ],
+        [
+          "MUDr. Martin Dančík",
+          ""
+        ]
+      ],
+      "zdroje": [
+        [
+          "Archivní zpráva ČES",
+          "archiv-kongresy-ces-7-vyrocni-kongres-ces.html"
+        ]
+      ]
+    },
+    {
+      "cislo": 8,
+      "rok": 2016,
+      "datum": "24. 9. 2016",
+      "misto": "Hotel Pyramida, Praha",
+      "nazev": "8. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "Dr. Fabio Gorni",
+          "Endodontické dilema"
+        ],
+        [
+          "MUDr. et MUDr. Jiří Krug, Ph.D.",
+          "Retroendodontické ošetření v moderní chirurgické endodoncii"
+        ],
+        [
+          "MUDr. Daniel Černý, Ph.D.",
+          ""
+        ],
+        [
+          "MUDr. Jiří Palek",
+          ""
+        ],
+        [
+          "MUDr. Jan Šváb",
+          ""
+        ]
+      ],
+      "zdroje": [
+        [
+          "Archivní zpráva ČES",
+          "archiv-kongresy-ces-8-vyrocni-kongres-ces.html"
+        ]
+      ]
+    },
+    {
+      "cislo": 9,
+      "rok": 2017,
+      "datum": "23. 9. 2017",
+      "misto": "Hotel Pyramida, Praha",
+      "nazev": "9. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "doc. MUDr. Luděk Peřinka, CSc.",
+          "Kam směřuje česká endodoncie"
+        ],
+        [
+          "Dr. Cecilia Bourguignon",
+          "Komplikace úrazů zubů – role endodontisty"
+        ],
+        [
+          "MUDr. Jiří Škrdlant",
+          "Chirurgické retrográdní endodontické ošetření – indikace, anatomické a estetické souvislosti"
+        ],
+        [
+          "MDDr. Radovan Žižka, Ph.D.",
+          "Endodontické ošetření stálých zubů s neukončeným vývojem"
+        ],
+        [
+          "MUDr. Radek Mounajjed, Ph.D.",
+          ""
+        ],
+        [
+          "MUDr. Filip Světlík",
+          ""
+        ]
+      ],
+      "zdroje": [
+        [
+          "Archivní zpráva ČES",
+          "archiv-kongresy-ces-9-vyrocni-kongres-ces.html"
+        ]
+      ]
+    },
+    {
+      "cislo": 10,
+      "rok": 2018,
+      "datum": "21.–22. 9. 2018",
+      "misto": "Obecní dům a hotel Pyramida, Praha",
+      "nazev": "10. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "prof. Mahmoud Torabinejad",
+          ""
+        ],
+        [
+          "MUDr. Daniel Černý, Ph.D.",
+          "MTA – vlastní poznatky a výsledky"
+        ],
+        [
+          "MUDr. Katarína Cyprichová",
+          "Využití MTA v dětské endodoncii"
+        ],
+        [
+          "MUDr. Daniel Ott",
+          "Odstraňování zalomených kořenových nástrojů"
+        ],
+        [
+          "MUDr. et MUDr. Jiří Krug, Ph.D.",
+          "Hraniční indikace chirurgické endodoncie"
+        ],
+        [
+          "MUDr. Martin Georgiev",
+          "Využití CBCT v současné stomatologii"
+        ],
+        [
+          "MDDr. Radovan Žižka, Ph.D.",
+          "Externí cervikální invazivní resorpce"
+        ],
+        [
+          "MUDr. Jan Šváb",
+          "Kazuistiky s MTA"
+        ]
+      ],
+      "zdroje": [
+        [
+          "Archivní zpráva ČES",
+          "archiv-kongresy-ces-10-vyrocni-kongres-ces.html"
+        ],
+        [
+          "Zpráva v LKS",
+          "https://www.lks-casopis.cz/clanek/z-10-vyrocniho-kongresu-ces-v-praze/"
+        ]
+      ]
+    },
+    {
+      "cislo": 11,
+      "rok": 2019,
+      "datum": "20.–21. 9. 2019",
+      "misto": "Hotel Pyramida, Praha",
+      "nazev": "11. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "Dr. Domenico Ricucci",
+          "Klinická a histologická diagnóza pulpy; infekce kořenového systému"
+        ],
+        [
+          "Dr. John Stropko",
+          "Deset kroků ke spolehlivému výsledku apikální chirurgie"
+        ],
+        [
+          "MUDr. Radek Mounajjed, Ph.D.",
+          "Racionální koncept postendodontického ošetření"
+        ],
+        [
+          "MUDr. Ladislav Gregor, Ph.D.",
+          "Jak rekonstruovat endodonticky ošetřené zuby"
+        ],
+        [
+          "MDDr. Tomáš Buchta",
+          "Uzavření perforací biomateriály"
+        ],
+        [
+          "MUDr. Roman Blahuta, Ph.D.",
+          "Přístup k rozsáhlým periapikálním lézím"
+        ],
+        [
+          "MUDr. Jan Petřík",
+          ""
+        ]
+      ],
+      "zdroje": [
+        [
+          "Archivní program ČES",
+          "archiv-kongresy-ces-11-vyrocni-kongres-ces.html"
+        ],
+        [
+          "Zpráva v LKS",
+          "https://www.lks-casopis.cz/clanek/z-11-vyrocniho-kongresu-ces/"
+        ]
+      ]
+    },
+    {
+      "cislo": 12,
+      "rok": 2020,
+      "datum": "15.–18. 9. 2020",
+      "misto": "Distanční kongres bez fyzického místa konání",
+      "nazev": "12. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "MUDr. Aleš Zápotocký",
+          ""
+        ],
+        [
+          "MUDr. Martin Košťál",
+          ""
+        ],
+        [
+          "MUDr. Petr Závodský",
+          ""
+        ],
+        [
+          "prof. Simone Grandini",
+          ""
+        ]
+      ],
+      "zdroje": []
+    },
+    {
+      "cislo": 13,
+      "rok": 2021,
+      "datum": "18. 9. 2021",
+      "misto": "Cubex Centrum Praha",
+      "nazev": "13. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "Dr. Jorge Vera",
+          ""
+        ],
+        [
+          "Dr. Jan Behring",
+          ""
+        ],
+        [
+          "MUDr. Hana Zallmannová",
+          ""
+        ],
+        [
+          "MUDr. Jan Dražan",
+          ""
+        ],
+        [
+          "MDDr. Vít Jiroušek",
+          ""
+        ]
+      ],
+      "zdroje": []
+    },
+    {
+      "cislo": 14,
+      "rok": 2022,
+      "datum": "17. 9. 2022",
+      "misto": "Hotel International, Praha",
+      "nazev": "14. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "Dr. Andrey Polov",
+          "Terapie se zachováním vitality zubní dřeně"
+        ],
+        [
+          "MUDr. et MUDr. Jiří Krug, Ph.D.",
+          "Retrográdní chirurgická endodoncie – doporučený postup"
+        ],
+        [
+          "doc. MUDr. Luděk Peřinka, CSc.",
+          "Retrográdní chirurgická endodoncie – doporučený postup"
+        ],
+        [
+          "MDDr. Radovan Žižka, Ph.D.",
+          "Retrográdní chirurgická endodoncie – doporučený postup"
+        ],
+        [
+          "MUDr. Daniel Černý, Ph.D.",
+          "Úspěšnost endodontického ošetření – retrospektiva"
+        ],
+        [
+          "MUDr. Katarína Cyprichová",
+          "Vitapex a zinkoxideugenol v endodoncii"
+        ],
+        [
+          "MUDr. Martin Košťál",
+          "Není endodoncie bez preendodontické dostavby"
+        ],
+        [
+          "MUDr. Vladimír Černý",
+          "Sedace ve stomatologii – v čem se liší od ostatních oborů"
+        ]
+      ],
+      "zdroje": [
+        [
+          "Archivní program ČES",
+          "archiv-kongresy-ces-14-kongres-ces.html"
+        ],
+        [
+          "Zpráva v LKS",
+          "https://www.lks-casopis.cz/clanek/z-14-kongresu-ceske-endodonticke-spolecnosti/"
+        ]
+      ]
+    },
+    {
+      "cislo": 15,
+      "rok": 2023,
+      "datum": "16. 9. 2023",
+      "misto": "Hotel International, Praha",
+      "nazev": "15. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "prof. Shanon Patel",
+          "Zlepšování výsledků endodontického ošetření"
+        ],
+        [
+          "MDDr. Vít Jiroušek",
+          "Terapie kazu blízkého dřeni"
+        ],
+        [
+          "MDDr. Jakub Váša",
+          "Hledání a opracování kanálků, obliterace"
+        ],
+        [
+          "MDDr. Jan Kubeček",
+          "Hledání a opracování kanálků, obliterace"
+        ],
+        [
+          "PharmDr. Jana Matušková",
+          "Akutní bolest – volně prodejná analgetika z pohledu lékárníka"
+        ],
+        [
+          "MDDr. Marek Řehoř",
+          "Akcesorní kanálky dolních stálých molárů"
+        ]
+      ],
+      "zdroje": [
+        [
+          "Archivní program ČES",
+          "archiv-kongresy-ces-15-vyrocni-kongres-ces.html"
+        ]
+      ]
+    },
+    {
+      "cislo": 16,
+      "rok": 2024,
+      "datum": "20.–21. 9. 2024",
+      "misto": "O₂ universum, Praha",
+      "nazev": "16. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "prof. Hani F. Ounsi",
+          "Nikl-titanové nástroje a adaptivní opracování kořenových kanálků"
+        ],
+        [
+          "Dr. Antonis Chaniotis",
+          "Zakřivené a rozvětvené kořenové kanálky"
+        ],
+        [
+          "MDDr. Radovan Žižka, Ph.D.",
+          "Pulpotomie – indikace a klinický postup"
+        ],
+        [
+          "MDDr. Marek Vlna",
+          "Neodontogenní bolesti orofaciální oblasti"
+        ],
+        [
+          "MDDr. Antonín Tichý, Ph.D.",
+          "Adheze v endodoncii"
+        ],
+        [
+          "MUDr. et MDDr. Martin Bartoš, Ph.D.",
+          "Využití mikro-CT v endodoncii"
+        ]
+      ],
+      "zdroje": [
+        [
+          "Zpráva v LKS",
+          "https://www.lks-casopis.cz/clanek/z-16-vyrocniho-kongresu-ceske-endodonticke-spolecnosti/"
+        ]
+      ]
+    },
+    {
+      "cislo": 17,
+      "rok": 2025,
+      "datum": "19.–20. 9. 2025",
+      "misto": "O₂ universum, Praha",
+      "nazev": "17. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "prof. David Sonntag",
+          "Trepanační otvor, vytvoření průchodné cesty v kanálku a strategie reendodoncie"
+        ],
+        [
+          "Dr. Christoph Zirkel",
+          "Trepanační otvor, vytvoření průchodné cesty v kanálku a strategie reendodoncie"
+        ],
+        [
+          "MDDr. Tomas Kupec",
+          "Zubní úrazy při sportu a jejich prevence"
+        ],
+        [
+          "MUDr. Jiří Škrdlant",
+          "Jednonávštěvová endodoncie"
+        ],
+        [
+          "Ing. Martina Škrdlantová",
+          "Ekonomické souvislosti jednonávštěvové endodoncie"
+        ],
+        [
+          "MDDr. Andrej Janiš",
+          "Esej o hlubokém kazu"
+        ],
+        [
+          "MDDr. Michal Štefanatný, Ph.D.",
+          "Co dělat, když endodontické ošetření nevede k očekávanému výsledku"
+        ]
+      ],
+      "zdroje": [
+        [
+          "Zpráva v Občasníku ČES 2026",
+          "dokumenty/obcasnik-ces-2026.pdf"
+        ]
+      ]
+    },
+    {
+      "cislo": 18,
+      "rok": 2026,
+      "datum": "18.–19. 9. 2026",
+      "misto": "O₂ universum, Praha",
+      "nazev": "18. výroční kongres ČES",
+      "prednasejici": [
+        [
+          "prof. Matthias Zehnder",
+          "Dezinfekce kořenového systému"
+        ],
+        [
+          "Dr. Michael Solomonov",
+          "Biologické hodiny v endodoncii"
+        ],
+        [
+          "MUDr. Hana Zallmannová",
+          "Endodontické ošetření po úrazech zubů"
+        ],
+        [
+          "MUDr. Roman Blahuta, Ph.D.",
+          "Od endodontického dospívání k endodontické dospělosti"
+        ],
+        [
+          "MDDr. Ivan Martin",
+          "Přeplnění kořenového kanálku"
+        ],
+        [
+          "MDDr. Marek Řehoř",
+          "Obcházení zalomených nástrojů a schůdků v kořenových kanálcích"
+        ]
+      ],
+      "zdroje": []
+    }
+  ],
+  "ostatni": [
+    {
+      "rok": 2024,
+      "datum": "21. 7. 2024",
+      "misto": "Anatomický ústav 1. LF UK, Praha",
+      "nazev": "Den s regenerativní endodoncií",
+      "prednasejici": [
+        [
+          "prof. George T.-J. Huang",
+          "Kmenové buňky a regenerativní endodoncie – více než 20 let vývoje"
+        ],
+        [
+          "MDDr. Nela Jouklová, Ph.D.",
+          "Výzkum regenerativní endodoncie a zkušenosti ze zahraniční stáže"
+        ],
+        [
+          "MDDr. Radovan Žižka, Ph.D.",
+          "Deset let klinických zkušeností s regenerativní endodoncií"
+        ],
+        [
+          "MUDr. Martin Čelko",
+          "Revitalizace jednokořenových zubů s periapikálním nálezem"
+        ]
+      ],
+      "zdroje": [
+        [
+          "Zpráva v LKS",
+          "https://www.lks-casopis.cz/clanek/z-letniho-kongresu-den-s-regenerativni-endodoncii/"
+        ]
+      ]
+    },
+    {
+      "rok": 2024,
+      "datum": "9. 11. 2024",
+      "misto": "Ústav molekulární genetiky AV ČR, Praha",
+      "nazev": "Vybrané kapitoly z pedostomatologie",
+      "prednasejici": [
+        [
+          "Dr. med. dent. Hubertus van Waes",
+          "Poruchy prořezávání, vývojové anomálie, dětská stomatochirurgie a dentální traumatologie"
+        ]
+      ],
+      "zdroje": [
+        [
+          "Archivní program ČES",
+          "archiv-prednaska-031.html"
+        ],
+        [
+          "Zpráva v LKS",
+          "https://www.lks-casopis.cz/clanek/vzdelavaci-akce-ceske-endodonticke-spolecnosti-vybrane-kapitoly-z-pedostomatologie/"
+        ]
+      ]
+    },
+    {
+      "rok": 2025,
+      "datum": "27.–29. 6. 2025",
+      "misto": "Ústav molekulární genetiky AV ČR a 1. LF UK, Praha",
+      "nazev": "Mikrochirurgická endodoncie s profesorkou Paulou Villou",
+      "prednasejici": [
+        [
+          "prof. Paula Villa",
+          "Mikrochirurgická endodoncie – indikace, plánování a praktické postupy"
+        ]
+      ],
+      "zdroje": [
+        [
+          "Archivní program ČES",
+          "archiv-prednasky-mikrochirurgicka-endodoncie-microsurgical-endodontics.html"
+        ]
+      ]
+    },
+    {
+      "rok": 2026,
+      "datum": "27. 3. 2026",
+      "misto": "Ústav molekulární genetiky AV ČR, Praha",
+      "nazev": "Zákroky se zachováním vitality zubní dřeně",
+      "prednasejici": [
+        [
+          "prof. dr. Nessrin Taha",
+          "Zákroky se zachováním vitality zubní dřeně – pulpotomie"
+        ]
+      ],
+      "zdroje": [
+        [
+          "Zpráva v LKS",
+          "https://www.lks-casopis.cz/clanek/ces-prednaska-profesorky-nessrin-taha-prinesla-aktualni-pohled-na-pulpotomie/"
+        ]
+      ]
+    }
+  ]
+}
