@@ -9,11 +9,18 @@ PRODUCTION="--production" in sys.argv
 OUT=ROOT/"release" if PRODUCTION else ROOT
 OUT.mkdir(exist_ok=True)
 E=[
- dict(id='clenska-schuze',title='Volební členská schůze',start='2027-01-23',last='2027-01-23',label='23. 1. 2027',place='Grandior Praha',kind='meeting',type='Členská schůze',summary='Členská schůze České endodontické společnosti s volbou orgánů spolku.',more='Podrobný program, čas zahájení a podklady k volbám zveřejníme před konáním schůze.'),
- dict(id='camilleri',title='Od MTA k biokeramickým sealerům',start='2027-03-19',last='2027-03-19',label='19. 3. 2027',place='Ústav molekulární genetiky AV ČR, Vídeňská 1083, Praha 4',kind='lecture',type='Přednáška',summary='prof. Josette Camilleri · Praha',more='Současný pohled na endodontické materiály. Přednáška prof. Josette Camilleri se zaměří na hydraulické kalcium-silikátové materiály, jejich vlastnosti a klinické použití.'),
+ dict(id='clenska-schuze',title='Členská schůze ČES',start='2027-01-23',last='2027-01-23',label='23. 1. 2027',place='Grandior, Praha',kind='meeting',type='Členská schůze',summary='Členská schůze České endodontické společnosti s volbou orgánů spolku.',more='Podrobný program, čas zahájení a podklady k volbám zveřejníme před konáním schůze.'),
+ dict(id='camilleri',title='Camilleri: Od MTA k biokeramickým sealerům',start='2027-03-19',last='2027-03-19',label='19. 3. 2027',place='Ústav molekulární genetiky AV ČR, Vídeňská 1083, Praha 4',kind='lecture',type='Přednáška',summary='prof. Josette Camilleri · Praha',more='Současný pohled na endodontické materiály. Přednáška prof. Josette Camilleri se zaměří na hydraulické kalcium-silikátové materiály, jejich vlastnosti a klinické použití.'),
  dict(id='vyjezdni-zasedani',title='Společné výjezdní zasedání ČES a SES',start='2027-06-18',last='2027-06-20',label='18.–20. 6. 2027',place='Hotel Horal, Rožnov pod Radhoštěm',kind='meeting',type='Zasedání',summary='Hotel Horal, Rožnov pod Radhoštěm · společně se slovenskou SES',more='Výjezdní zasedání České endodontické společnosti společně se Slovenskou endodontickou spoločnosťou. Program a podmínky účasti zveřejníme po jejich upřesnění.'),
  dict(id='kongres',title='19. výroční kongres ČES',start='2027-09-24',last='2027-09-25',label='24.–25. 9. 2027',place='O₂ universum, Praha',kind='congress',type='Kongres',summary='19. ročník · výroční rok ČES',more='Devatenáctý výroční kongres České endodontické společnosti se uskuteční 24. a 25. září 2027. Kongres se uskuteční v O₂ universu v Praze. Řečníky, program a informace k registraci postupně doplníme.')]
+E.extend([
+ dict(id='ese-rim-2027',title='Bienální kongres ESE',start='2027-09-08',last='2027-09-11',label='8.–11. 9. 2027',place='La Nuvola, Řím, Itálie',kind='congress',type='Kongres ESE',summary='La Nuvola, Řím · mezinárodní akce pořádaná ESE',more='23. bienální kongres Evropské endodontické společnosti (ESE) se uskuteční 8.–11. září 2027 v kongresovém centru La Nuvola v Římě. Informace o programu a účasti najdete na oficiálním webu pořadatele.'),
+ dict(id='krastl-2027',title='Dentální traumatologie s Gabrielem Krastlem',start='2027-10-16',last='2027-10-16',label='16. 10. 2027',place='Místo konání upřesníme',kind='lecture',type='Přednáška',summary='Gabriel Krastl · dentální traumatologie',more='Přednáška Gabriela Krastla věnovaná dentální traumatologii. Název akce je zatím pracovní; podrobný program, místo konání a informace k registraci připravujeme.')
+])
+E.sort(key=lambda e:e['start'])
+EVENTS_BY_ID={e['id']:e for e in E}
 audiences={'camilleri':'Pro zubní lékaře · členy i nečleny','clenska-schuze':'Pro členy ČES','vyjezdni-zasedani':'Podmínky účasti připravujeme','kongres':'Pro zubní lékaře · registraci připravujeme'}
+audiences.update({'ese-rim-2027':'Mezinárodní kongres ESE · pro zubní lékaře','krastl-2027':'Podmínky účasti připravujeme'})
 for e in E:e['audience']=audiences[e['id']]
 for e in E:e['end']=(date.fromisoformat(e['last'])+timedelta(days=1)).strftime('%Y%m%d')
 def esc(s):return html.escape(str(s),quote=True)
@@ -51,11 +58,11 @@ def calendar_button(e,label='Uložit termín do kalendáře'):
  data=esc(json.dumps(dict(id=e['id'],title=e['title'],place=e['place'],start=e['start'].replace('-',''),end=e['end']),ensure_ascii=False))
  return '<button type="button" class="button secondary" data-calendar="'+data+'">'+label+'</button>'
 def featured():
- return (ROOT/'content/featured.html').read_text().replace('<!-- congress-calendar -->',calendar_button(E[3]))
+ return (ROOT/'content/featured.html').read_text().replace('<!-- congress-calendar -->',calendar_button(EVENTS_BY_ID['kongres']))
 def community():
  return (ROOT/'content/community.html').read_text()
 def home_calendar():
- dates=[('23.','LEDNA',E[0]),('19.','BŘEZNA',E[1]),('18.–20.','ČERVNA',E[2]),('24.–25.','ZÁŘÍ',E[3])]
+ dates=[('23.','LEDNA',EVENTS_BY_ID['clenska-schuze']),('19.','BŘEZNA',EVENTS_BY_ID['camilleri']),('18.–20.','ČERVNA',EVENTS_BY_ID['vyjezdni-zasedani']),('24.–25.','ZÁŘÍ',EVENTS_BY_ID['kongres'])]
  return '<section class="wrap home-calendar" aria-labelledby="calendar-title"><div class="section-head"><h2 id="calendar-title" class="calendar-heading">Kalendář akcí</h2><a class="text-link" href="kalendar.html">Všechny akce →</a></div><div class="calendar-columns">'+''.join('<a class="calendar-item" href="'+e['id']+'.html"><time datetime="'+e['start']+'"><strong>'+day+'</strong><span>'+month+'<br>2027</span></time><div><h3>'+e['title']+'</h3><p>'+esc(e['place'])+'</p><small>'+e['audience']+'</small></div><span aria-hidden="true">→</span></a>' for day,month,e in dates)+'</div></section>'
 def home_resources():
  return '<section class="home-resources" aria-label="Odborné zdroje"><div class="wrap resource-shortcuts">'+''.join('<a href="'+url+'">'+icon(i)+'<span><strong>'+title+'</strong><small>'+desc+'</small></span><span aria-hidden="true">→</span></a>' for i,title,desc,url in [('file','Občasník ČES','Aktuální vydání i celý archiv','obcasnik.html'),('pen','Pro lékaře','Doporučení, nástroje a Grant ČES','pro-lekare.html'),('file','Pro veřejnost','Zachování zubů a pomoc při úrazu','pro-verejnost.html'),('board','Členství','Výhody a jak se stát členem','clenstvi.html')])+'</div></section>'
@@ -69,6 +76,8 @@ for e in E:
  content='<p>'+esc(e['more'])+'</p>'
  if e['id']=='camilleri':
   content=(ROOT/'content/camilleri.html').read_text()
+ elif e['id']=='ese-rim-2027':content+=button('Oficiální web kongresu ESE','https://www.esebiennialcongress.com/')
+ elif e['id']=='krastl-2027':content+='<div class="notice">Čas zahájení a podmínky účasti zveřejníme po jejich upřesnění.</div>'
  else:content+='<div class="notice">'+('Program a registraci připravujeme. Termín si již můžete uložit do kalendáře.' if e['id']=='kongres' else 'Čas zahájení a další organizační informace připravujeme.')+'</div>'
  if e['id']=='kongres':content+='<h2>Partnerství kongresu</h2><p>Máte zájem podpořit kongres ČES? Kontaktujte <a href="mailto:sekretariat@endodont.cz">sekretariát společnosti</a>. Potvrzené partnery ročníku 2027 zveřejníme zde.</p>'
  content+=button('Všechny akce','kalendar.html',True)
