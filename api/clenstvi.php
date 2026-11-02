@@ -25,6 +25,7 @@ if (!session_start()) {
     respond(503, ['error' => 'Odesílání je nyní nedostupné. Napište prosím sekretariátu.']);
 }
 if ($method === 'GET') {
+    if (!is_file(dirname(__DIR__, 2) . '/data/ces-membership/config.php') || !function_exists('curl_init')) respond(503, ['error'=>'Odesílání je nyní nedostupné. Napište prosím sekretariátu.']);
     if (!empty($_SESSION['accepted_fingerprint'])) unset($_SESSION['accepted_fingerprint'], $_SESSION['reference'], $_SESSION['confirmation'], $_SESSION['request_id'], $_SESSION['token']);
     $_SESSION['request_id'] ??= bin2hex(random_bytes(32));
     if (empty($_SESSION['token']) || time() - ($_SESSION['issued'] ?? 0) > 3600) {
