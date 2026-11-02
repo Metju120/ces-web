@@ -1,8 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// The public application must be validated on the receiving server too. This
-// module does not expose an endpoint or send mail; connection is a later step.
+// Validate on both servers. Keep this file identical to the public form's copy.
 final class ApplicationInputError extends RuntimeException {}
 function application_input(array $input, DateTimeImmutable $today): array {
  $limits=['first_name'=>100,'last_name'=>100,'title_before'=>100,'title_after'=>100,'faculty'=>200,'address_line'=>500,'phone'=>40,'email'=>254];
@@ -25,5 +24,7 @@ function application_input(array $input, DateTimeImmutable $today): array {
  if(!preg_match('/^\d{4}$/',(string)$year)||(int)$year<1900||(int)$year>(int)$today->format('Y'))throw new ApplicationInputError('Zkontrolujte rok promoce.');
  $v['graduation_year']=(int)$year;
  if(($input['conditions']??null)!==true)throw new ApplicationInputError('Potvrďte žádost o členství a podmínky stanov.');
+ if(($input['privacy_notice_version']??null)!=='5.0-1')throw new ApplicationInputError('Informace o zpracování údajů se změnily. Obnovte formulář.');
+ $v['privacy_notice_version']='5.0-1';
  return $v;
 }

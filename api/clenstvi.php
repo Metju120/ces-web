@@ -3,6 +3,7 @@ declare(strict_types=1);
 // Work in progress: application data is sent via authenticated HTTPS POST.
 date_default_timezone_set('Europe/Prague');
 require_once __DIR__ . '/application-validation.php';
+require_once __DIR__ . '/application-config.php';
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
 header('X-Content-Type-Options: nosniff');
@@ -25,7 +26,7 @@ if (!session_start()) {
     respond(503, ['error' => 'Odesílání je nyní nedostupné. Napište prosím sekretariátu.']);
 }
 if ($method === 'GET') {
-    if (!is_file(dirname(__DIR__, 2) . '/data/ces-membership/config.php') || !function_exists('curl_init')) respond(503, ['error'=>'Odesílání je nyní nedostupné. Napište prosím sekretariátu.']);
+    if (!function_exists('curl_init') || private_application_config() === null) respond(503, ['error'=>'Odesílání je nyní nedostupné. Napište prosím sekretariátu.']);
     if (!empty($_SESSION['accepted_fingerprint'])) unset($_SESSION['accepted_fingerprint'], $_SESSION['reference'], $_SESSION['confirmation'], $_SESSION['request_id'], $_SESSION['token']);
     $_SESSION['request_id'] ??= bin2hex(random_bytes(32));
     if (empty($_SESSION['token']) || time() - ($_SESSION['issued'] ?? 0) > 3600) {
@@ -76,17 +77,16 @@ $records[] = ['ip' => $ip, 'at' => $now];
 ftruncate($rate, 0); rewind($rate); fwrite($rate, json_encode(array_values($records))); fflush($rate);
 flock($rate, LOCK_UN); fclose($rate);
 // Credentials are provisioned separately, outside the public web root.
-$privateConfig = dirname(__DIR__, 2) . '/data/ces-membership/config.php';
-if (!is_file($privateConfig) || !function_exists('curl_init')) respond(503, ['error'=>'Odesílání je nyní nedostupné. Napište prosím sekretariátu.']);
-$service = require $privateConfig;
-$key = is_array($service) ? ($service['application_intake_secret'] ?? '') : '';
-if (!is_string($key) || !preg_match('/^[a-f0-9]{64}$/', $key)) respond(503, ['error'=>'Odesílání je nyní nedostupné. Napište prosím sekretariátu.']);
+$service = private_application_config();
+if ($service === null || !function_exists('curl_init')) respond(503, ['error'=>'Odesílání je nyní nedostupné. Napište prosím sekretariátu.']);
+$key = $service['application_intake_secret'];
 $payload = $clean;
 $payload['birth_date'] = $clean['birth_date'] ?? '';
 $payload['conditions'] = true;
 $requestId = $_SESSION['request_id'] ?? '';
 if (!preg_match('/^[a-f0-9]{64}$/', $requestId)) respond(503, ['error'=>'Platnost formuláře vypršela. Obnovte stránku a zkuste to znovu.']);
-$ch = curl_init('https://cesex.endodont.cz/api/application-intake');
+$port = $service['application_intake_port'] ?? 443;
+$ch = curl_init('https://cesex.endodont.cz' . ($port === 443 ? '' : ':' . $port) . '/api/application-intake');
 curl_setopt_array($ch, [
     CURLOPT_POST => true, CURLOPT_RETURNTRANSFER => true, CURLOPT_FOLLOWLOCATION => false,
     CURLOPT_CONNECTTIMEOUT => 8, CURLOPT_TIMEOUT => 30, CURLOPT_SSL_VERIFYPEER => true,

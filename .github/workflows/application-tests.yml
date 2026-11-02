@@ -1,9 +1,9 @@
 name: Membership form checks
 on:
   push:
-    paths: ['api/**', 'build.py', 'tests/application-fields.test.php', '.github/workflows/application-tests.yml']
+    paths: ['api/**', 'content/ochrana-clenstvi.html', 'build.py', 'tests/application-*.test.php', '.github/workflows/application-tests.yml']
   pull_request:
-    paths: ['api/**', 'build.py', 'tests/application-fields.test.php', '.github/workflows/application-tests.yml']
+    paths: ['api/**', 'content/ochrana-clenstvi.html', 'build.py', 'tests/application-*.test.php', '.github/workflows/application-tests.yml']
 permissions:
   contents: read
 jobs:
@@ -16,7 +16,7 @@ jobs:
           php-version: '8.2'
           extensions: mbstring, curl
           coverage: none
-      - run: php -l api/clenstvi.php && php -l api/application-validation.php && php tests/application-fields.test.php
+      - run: php -l api/clenstvi.php && php -l api/application-validation.php && php -l api/application-config.php && php tests/application-fields.test.php && php tests/application-config.test.php
       - run: python3 build.py --production
       - name: Check generated form
         run: |
@@ -27,4 +27,9 @@ jobs:
               assert 'name="'+field+'"' in p, field
           assert 'name="workplace"' not in p
           assert Path('release/api/application-validation.php').is_file()
+          assert 'name="privacy_notice_version" value="5.0-1"' in p
+          assert 'app.js?v=20261102-prihlaska5' in p
+          privacy = Path('release/ochrana-udaju.html').read_text()
+          assert 'Verze informací 5.0-1' in privacy
+          assert 'neukládají do členské databáze' not in privacy
           PY
