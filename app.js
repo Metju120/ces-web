@@ -9,6 +9,7 @@ const form=document.querySelector('#membership-form');
 if(form){
  const submit=form.querySelector('[type="submit"]'),availability=document.querySelector('#form-availability'),result=document.querySelector('#form-result');
  let ready=false,sending=false;
+ if(form.elements.graduation_year)form.elements.graduation_year.max=String(new Date().getFullYear());
  const endpoint=form.getAttribute('action');
  const showResult=text=>{result.hidden=false;result.textContent=text;result.focus()};
  async function prepareForm(){
@@ -17,7 +18,7 @@ if(form){
    const response=await fetch(endpoint,{credentials:'same-origin',headers:{Accept:'application/json'},signal:AbortSignal.timeout(12000)});
    const data=await response.json();
    if(!response.ok||data.service!=='ces-membership-v1'||typeof data.token!=='string')throw new Error();
-   form.elements.token.value=data.token;ready=true;submit.disabled=false;availability.textContent='Přihlášku odešleme přímo sekretariátu. Potvrzení přijde na zadaný e-mail.';
+   form.elements.token.value=data.token;ready=true;submit.disabled=false;availability.textContent='Přihlášku uložíme k vyřízení. Potvrzení odešleme na zadaný e-mail.';
   }catch{availability.innerHTML='Přímé odesílání je nyní nedostupné. Napište prosím na <a href="mailto:sekretariat@endodont.cz">sekretariat@endodont.cz</a>.'}
  }
  prepareForm();
@@ -30,7 +31,7 @@ if(form){
    let data;try{data=await response.json()}catch{throw new Error('Odeslání se nepodařilo ověřit. Zkontrolujte potvrzení v e-mailu nebo kontaktujte sekretariát.')}
    if(!response.ok||data.ok!==true)throw new Error(data.error||'Odeslání se nezdařilo. Zkuste to později nebo napište sekretariátu.');
    cesMetric('membership_submission_accepted',{confirmation:data.confirmation===true});
-   showResult(`Přihláška byla předána k odeslání sekretariátu. Evidenční číslo: ${data.reference}. `+(data.confirmation?'Potvrzení bylo předáno k odeslání na váš e-mail. Pokud jej nenajdete, zkontrolujte také spam.':'Potvrzení na váš e-mail se nepodařilo odeslat. Přihlášku znovu neposílejte; pro ověření kontaktujte sekretariát.'));
+   showResult(`Přihláška byla uložena k vyřízení. Evidenční číslo: ${data.reference}. `+(data.confirmation?'Potvrzení bylo předáno k odeslání na váš e-mail. Pokud jej nenajdete, zkontrolujte také spam.':'Potvrzení na váš e-mail se nepodařilo odeslat. Přihlášku znovu neposílejte; pro ověření kontaktujte sekretariát.'));
    form.querySelectorAll('input,textarea,button').forEach(el=>el.disabled=true);submit.textContent='Přihláška odeslána';availability.textContent='Sekretariát vás bude kontaktovat s dalším postupem.';ready=false;
   }catch(error){showResult(error.name==='TimeoutError'?'Spojení vypršelo. Odeslání se mohlo dokončit; ověřte potvrzení v e-mailu, než přihlášku odešlete znovu.':error.name==='Error'?error.message:'Odeslání se nepodařilo ověřit. Zkontrolujte potvrzení v e-mailu nebo kontaktujte sekretariát.');submit.disabled=false;submit.textContent='Odeslat přihlášku'}
   finally{sending=false}
