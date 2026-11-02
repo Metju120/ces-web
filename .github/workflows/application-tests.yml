@@ -28,7 +28,8 @@ jobs:
           assert 'name="workplace"' not in p
           assert Path('release/api/application-validation.php').is_file()
           assert 'name="privacy_notice_version" value="5.0-1"' in p
-          assert 'app.js?v=20261102-prihlaska5' in p
+          assert 'app-prihlaska5.js?v=20261102' in p
+          assert Path('release/app-prihlaska5.js').read_bytes() == Path('app.js').read_bytes()
           privacy = Path('release/ochrana-udaju.html').read_text()
           assert 'Verze informací 5.0-1' in privacy
           assert 'neukládají do členské databáze' not in privacy

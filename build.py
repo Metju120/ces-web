@@ -45,7 +45,8 @@ def footer(page):
 
 def write(page,title,body,desc='Česká endodontická společnost. Kongres, odborné vzdělávání, kalendář akcí a členství. 20 let ČES v roce 2027.'):
  title,desc,seo=metadata(page,title,desc,PRODUCTION)
- text=f'''<!doctype html><html lang="{'en' if page=='english.html' else 'cs'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{esc(title)} | ČES</title><meta name="description" content="{esc(desc)}"><meta name="theme-color" content="#337fc4"><meta property="og:title" content="{esc(title)} | ČES"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="website"><link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="style.css?v=20261025-president"><script src="app.js?v={('20261102-prihlaska5' if page=='prihlaska.html' else '20261025-polish')}" defer></script>{seo}</head><body class="{'home' if page=='index.html' else 'inner-page'}">'''+header(page)+'<main id="main">'+body+'</main>'+footer(page)+'</body></html>'
+ script_src='app-prihlaska5.js?v=20261102' if PRODUCTION and page=='prihlaska.html' else 'app.js?v='+('20261102-prihlaska5' if page=='prihlaska.html' else '20261025-polish')
+ text=f'''<!doctype html><html lang="{'en' if page=='english.html' else 'cs'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{esc(title)} | ČES</title><meta name="description" content="{esc(desc)}"><meta name="theme-color" content="#337fc4"><meta property="og:title" content="{esc(title)} | ČES"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="website"><link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="style.css?v=20261025-president"><script src="{script_src}" defer></script>{seo}</head><body class="{'home' if page=='index.html' else 'inner-page'}">'''+header(page)+'<main id="main">'+body+'</main>'+footer(page)+'</body></html>'
  (OUT/page).write_text(text,encoding='utf8')
 def intro(title,lead=''):return '<section class="page-intro"><div class="wrap"><div class="breadcrumb"><a href="index.html">Úvod</a> / '+esc(title)+'</div><h1>'+esc(title)+'</h1>'+('<p class="lead">'+lead+'</p>' if lead else '')+'</div></section>'
 def filters():return '<div class="filters" role="group" aria-label="Filtrovat akce">'+''.join(f'<button type="button" data-filter="{k}" aria-pressed="{str(k=="all").lower()}">{n}</button>' for k,n in [('all','Všechny akce'),('lecture','Vzdělávání'),('congress','Kongresy'),('meeting','Schůze a zasedání')])+'</div>'
@@ -145,6 +146,7 @@ finish_seo(OUT,PRODUCTION)
 if PRODUCTION:
  for name in ['assets','dokumenty','api']:shutil.copytree(ROOT/name,OUT/name,dirs_exist_ok=True)
  for name in ['style.css','app.js','assessment.css','assessment.js']:shutil.copyfile(ROOT/name,OUT/name)
+ shutil.copyfile(ROOT/'app.js',OUT/'app-prihlaska5.js')
  if (ROOT/'vendor').is_dir():shutil.copytree(ROOT/'vendor',OUT/'vendor',dirs_exist_ok=True)
 print('Built',len(list(OUT.glob('*.html'))),'pages in',OUT)
 
