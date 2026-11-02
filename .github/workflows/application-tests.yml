@@ -1,0 +1,30 @@
+name: Membership form checks
+on:
+  push:
+    paths: ['api/**', 'build.py', 'tests/application-fields.test.php', '.github/workflows/application-tests.yml']
+  pull_request:
+    paths: ['api/**', 'build.py', 'tests/application-fields.test.php', '.github/workflows/application-tests.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, curl
+          coverage: none
+      - run: php -l api/clenstvi.php && php -l api/application-validation.php && php tests/application-fields.test.php
+      - run: python3 build.py --production
+      - name: Check generated form
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('release/prihlaska.html').read_text()
+          for field in ['first_name','last_name','faculty','graduation_year','birth_date','address_line','country_code','phone','email']:
+              assert 'name="'+field+'"' in p, field
+          assert 'name="workplace"' not in p
+          assert Path('release/api/application-validation.php').is_file()
+          PY
