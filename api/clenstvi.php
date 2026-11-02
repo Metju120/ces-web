@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
-// PHP 8.2+ on the Czech hosting. No database, credentials or third-party form service.
+// Work in progress: application data is sent via authenticated HTTPS POST.
+date_default_timezone_set('Europe/Prague');
+require_once __DIR__ . '/application-validation.php';
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
 header('X-Content-Type-Options: nosniff');
@@ -23,6 +25,8 @@ if (!session_start()) {
     respond(503, ['error' => 'Odesílání je nyní nedostupné. Napište prosím sekretariátu.']);
 }
 if ($method === 'GET') {
+    if (!empty($_SESSION['accepted_fingerprint'])) unset($_SESSION['accepted_fingerprint'], $_SESSION['reference'], $_SESSION['confirmation'], $_SESSION['request_id'], $_SESSION['token']);
+    $_SESSION['request_id'] ??= bin2hex(random_bytes(32));
     if (empty($_SESSION['token']) || time() - ($_SESSION['issued'] ?? 0) > 3600) {
         $_SESSION['token'] = bin2hex(random_bytes(32));
         $_SESSION['issued'] = time();
@@ -43,23 +47,10 @@ if (!is_array($data) || !is_string($data['token'] ?? null) || empty($_SESSION['t
 if (time() - ($_SESSION['issued'] ?? time()) < 3 || !empty($data['website'])) {
     respond(422, ['error' => 'Odeslání se nezdařilo. Zkuste to prosím znovu.']);
 }
-$fields = ['title' => 80, 'name' => 200, 'email' => 254, 'phone' => 80, 'workplace' => 200, 'address' => 300, 'note' => 1500];
-$clean = [];
-foreach ($fields as $field => $limit) {
-    $v = $data[$field] ?? '';
-    if (!is_string($v) || preg_match('//u', $v) !== 1 || strlen($v) > $limit * 4 || preg_match('/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/', $v)) {
-        respond(422, ['error' => 'Zkontrolujte vyplněné údaje.']);
-    }
-    if ($field !== 'note' && preg_match('/[\r\n]/', $v)) {
-        respond(422, ['error' => 'Zkontrolujte vyplněné údaje.']);
-    }
-    $clean[$field] = trim($v);
-}
-foreach (['name', 'email', 'workplace', 'address'] as $field) {
-    if ($clean[$field] === '') respond(422, ['error' => 'Vyplňte všechna povinná pole.']);
-}
-if (!filter_var($clean['email'], FILTER_VALIDATE_EMAIL) || strlen($clean['email']) > 254 || ($data['conditions'] ?? false) !== true) {
-    respond(422, ['error' => 'Zkontrolujte e-mail a potvrzení podmínek členství.']);
+try {
+    $clean = application_input($data, new DateTimeImmutable('today'));
+} catch (ApplicationInputError $e) {
+    respond(422, ['error' => $e->getMessage()]);
 }
 $fingerprint = hash('sha256', json_encode($clean));
 if (($_SESSION['accepted_fingerprint'] ?? '') === $fingerprint) {
@@ -83,20 +74,32 @@ if ($perIp >= 5 || count($records) >= 60) {
 $records[] = ['ip' => $ip, 'at' => $now];
 ftruncate($rate, 0); rewind($rate); fwrite($rate, json_encode(array_values($records))); fflush($rate);
 flock($rate, LOCK_UN); fclose($rate);
-$reference = 'CES-' . gmdate('Ymd') . '-' . strtoupper(bin2hex(random_bytes(4)));
-$labels = ['title' => 'Titul', 'name' => 'Jméno a příjmení', 'email' => 'E-mail', 'phone' => 'Telefon', 'workplace' => 'Pracoviště', 'address' => 'Adresa pracoviště', 'note' => 'Poznámka'];
-$body = "Přihláška do České endodontické společnosti\nEvidence: $reference\n\n";
-foreach ($labels as $key => $label) $body .= $label . ': ' . $clean[$key] . "\n";
-$body .= "\nZájemce potvrzuje splnění podmínek členství a seznámení se stanovami ČES.\n";
-$headers = ['From' => 'CES sekretariat <sekretariat@endodont.cz>', 'Reply-To' => $clean['email'], 'MIME-Version' => '1.0', 'Content-Type' => 'text/plain; charset=UTF-8', 'Content-Transfer-Encoding' => 'base64'];
-$subject = '=?UTF-8?B?' . base64_encode('Přihláška do ČES — ' . $reference) . '?=';
-if (!mail('sekretariat@endodont.cz', $subject, chunk_split(base64_encode($body)), $headers)) {
-    respond(502, ['error' => 'Přihlášku se nepodařilo předat k odeslání. Zkuste to později nebo napište sekretariátu.']);
+// Credentials are provisioned separately, outside the public web root.
+$privateConfig = dirname(__DIR__, 2) . '/data/ces-membership/config.php';
+if (!is_file($privateConfig) || !function_exists('curl_init')) respond(503, ['error'=>'Odesílání je nyní nedostupné. Napište prosím sekretariátu.']);
+$service = require $privateConfig;
+$key = is_array($service) ? ($service['application_intake_secret'] ?? '') : '';
+if (!is_string($key) || !preg_match('/^[a-f0-9]{64}$/', $key)) respond(503, ['error'=>'Odesílání je nyní nedostupné. Napište prosím sekretariátu.']);
+$payload = $clean;
+$payload['birth_date'] = $clean['birth_date'] ?? '';
+$payload['conditions'] = true;
+$requestId = $_SESSION['request_id'] ?? '';
+if (!preg_match('/^[a-f0-9]{64}$/', $requestId)) respond(503, ['error'=>'Platnost formuláře vypršela. Obnovte stránku a zkuste to znovu.']);
+$ch = curl_init('https://cesex.endodont.cz/api/application-intake');
+curl_setopt_array($ch, [
+    CURLOPT_POST => true, CURLOPT_RETURNTRANSFER => true, CURLOPT_FOLLOWLOCATION => false,
+    CURLOPT_CONNECTTIMEOUT => 8, CURLOPT_TIMEOUT => 30, CURLOPT_SSL_VERIFYPEER => true,
+    CURLOPT_SSL_VERIFYHOST => 2, CURLOPT_PROTOCOLS => CURLPROTO_HTTPS,
+    CURLOPT_HTTPHEADER => ['Content-Type: application/json', 'Accept: application/json', 'X-CESEX-INTAKE-KEY: ' . $key],
+    CURLOPT_POSTFIELDS => json_encode(['request_id'=>$requestId, 'application'=>$payload], JSON_UNESCAPED_UNICODE|JSON_THROW_ON_ERROR),
+]);
+$response = curl_exec($ch); $status = curl_getinfo($ch, CURLINFO_RESPONSE_CODE); curl_close($ch);
+if (!is_string($response) || strlen($response)>16384) respond(502, ['error'=>'Výsledek se nepodařilo ověřit. Zkuste odeslat znovu beze změny údajů, nebo kontaktujte sekretariát.']);
+$result = json_decode($response, true);
+if ($status !== 200 || !is_array($result) || ($result['ok'] ?? false) !== true || !is_string($result['reference'] ?? null)) {
+    respond(502, ['error'=>'Uložení se nepodařilo ověřit. Zkuste to znovu beze změny údajů, nebo kontaktujte sekretariát.']);
 }
-$headers['Reply-To'] = 'sekretariat@endodont.cz';
-$confirmation = "Dobrý den,\n\nvaše přihláška do České endodontické společnosti byla předána sekretariátu.\nEvidenční číslo: $reference\n\nSekretariát vás bude kontaktovat s dalším postupem. Toto potvrzení samo o sobě neznamená přijetí za člena.\n\nS pozdravem\nSekretariát České endodontické společnosti\nsekretariat@endodont.cz\n";
-$confirmed = mail($clean['email'], '=?UTF-8?B?' . base64_encode('Potvrzení přihlášky do ČES') . '?=', chunk_split(base64_encode($confirmation)), $headers);
 $_SESSION['accepted_fingerprint'] = $fingerprint;
-$_SESSION['reference'] = $reference;
-$_SESSION['confirmation'] = $confirmed;
-respond(200, ['ok' => true, 'reference' => $reference, 'confirmation' => $confirmed]);
+$_SESSION['reference'] = $result['reference'];
+$_SESSION['confirmation'] = ($result['confirmation_accepted'] ?? false) === true;
+respond(200, ['ok'=>true, 'reference'=>$_SESSION['reference'], 'confirmation'=>$_SESSION['confirmation']]);
